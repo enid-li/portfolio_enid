@@ -1,24 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
-import Header from "./header/page";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Header */}
-     
-      <Header/>
-
       {/* Main Content */}
       <main className="max-w-[1400px] mx-auto px-8 md:px-12 pt-40 pb-32 ">
         {/* Selected Works Section */}
         <section className="mb-48">
-          <h1 className="serif-italic text-6xl md:text-8xl mb-32 leading-none">
-            Selected
+          <div className="flex flex-col  md:py-12">
+            <p className="text-4xl font-medium py-4">Hi, I'm Enid Li - a</p>
+            <h1 className="text-8xl font-extrabold">FULL-STACK 
             <br />
-            Works
-          </h1>
+            DESIGNER
+            </h1>
+            <p className="text-4xl font-medium py-4">TBH，I'm not trying to be a designer. I just make things, 
+            <br />
+            and this is where they go.</p>
+          </div>
 
+          
           {/* Portfolio Items */}
           <div className="space-y-20">
             {/* Item 1 - with thumbnail */}
@@ -198,6 +200,7 @@ export default function Home() {
     </div>
   );
 }
+
 
 interface PortfolioItemProps {
   title: string;

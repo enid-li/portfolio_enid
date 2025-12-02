@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ClientBody from "./ClientBody";
+import Header from "./header/page";
 
 export const metadata: Metadata = {
   title: "Portfolio - Product Designer",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <ClientBody>{children}</ClientBody>
+      <ClientBody>
+        <Header />
+          {children}
+      </ClientBody>
     </html>
   );
 }

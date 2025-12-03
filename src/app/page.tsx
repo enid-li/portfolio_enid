@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { Video } from "lucide-react";
 
 export default function Home() {
   return (
@@ -11,54 +12,29 @@ export default function Home() {
         <section className="mb-48">
           <div className="flex flex-col  md:py-12">
             <p className="text-4xl font-medium py-4">Hi, I'm Enid Li - a</p>
-            <h1 className="text-8xl font-extrabold">FULL-STACK 
-            <br />
-            DESIGNER
+            <h1 className="text-[clamp(2.5rem,6vw,3.75rem)] sm:text-5xl md:text-7xl lg:text-8xl 2xl:text-[clamp(5.875rem,4.5vw,10rem)] font-extrabold min-w-0">FULL-STACK
+              <br />
+              DESIGNER
             </h1>
-            <p className="text-4xl font-medium py-4">TBH，I'm not trying to be a designer. I just make things, 
-            <br />
-            and this is where they go.</p>
+            <p className="text-4xl font-medium py-4">TBH，I'm not trying to be a designer. I just make things,
+              <br />
+              and this is where they go.</p>
           </div>
 
-          
+
+
           {/* Portfolio Items */}
           <div className="space-y-20">
-            {/* Item 1 - with thumbnail */}
-
-            <hr />
-            <div className="grid grid-cols-3 gap-4 ">
-              {/* 第一张图  */}
-              <div>
-                <img src="/assets/referral.png" className="w-full h-full object-cover aspect-[4/3]" alt="" />
-              </div>
-              {/* 第二张图  */}
-              <div>
-                <video autoPlay loop muted src="/assets/referral_welcome.mp4" className="w-full h-full object-cover aspect-[4/3]"></video>
-              </div>
-              {/* 第三张图  */}
-              <div>
-                {/* <img src="/assets/sample.png" className="w-full h-full object-cover aspect-[4/3]" alt="" /> */}
-                <video autoPlay loop muted src="/assets/dora_ai_main.mp4" className="w-full h-full object-cover aspect-[4/3]"></video>
-              </div>
-              {/* </div> */}
-              <div className="flex flex-col">
-                <span className="text-base font-medium mb-2 leading-tight">Dora.ai</span>
-                <span className="text-sm text-white/40">Oct. 2023 - Feb. 2024</span>
-              </div>
-              <div className="flex flex-col gap-2">
-                <span className="text-base font-sm mb-2 leading-tight">I designed for Dora AI features, a new editor for marketers and brand designers to create on-brand content. I defined the editing system, extended Design System capabilities into a new context, and shipped features like Focused Editing, Make Image (using gpt-image-1), the Inline Toolbar, and more. Launched at Config 2025.</span>
-                <Link href="/project" className={`text-sm font-medium hover:opacity-70 transition-opacity inline-flex items-center gap-2 `}>READ MORE</Link>
-              </div>
-              <div>1</div>
-
-              {/* <div className="col-span-2 row-span-2 grid grid-cols-3 gap-4 flex-1">
-                <span className="bg-[teal]">1</span>
-                <span className="bg-[teal]">2</span>
-                <span className="bg-[teal]">3</span>
-              </div> */}
-              {/* <div className="col-span-2">03</div> */}
-            </div>
-            <hr />
+            <hr></hr>
+            <DesignProjectItem
+            title="Dora.ai"
+            date="Oct. 2023 - Feb. 2024"
+            description="I designed for Dora AI features, a new editor for marketers and brand designers to create on-brand content. I defined the editing system, extended Design System capabilities into a new context, and shipped features like Focused Editing, Make Image (using gpt-image-1), the Inline Toolbar, and more. Launched at Config 2025."
+            pictureSrc1="/assets/referral.png"
+            videoSrc1="/assets/referral_welcome.mp4"
+            videoSrc2="/assets/dora_ai_main.mp4"
+            buttonName="READ MORE"                
+            />  
 
 
             {/* Item 2 - with thumbnail */}
@@ -208,6 +184,75 @@ interface PortfolioItemProps {
   description: string;
   thumbnail?: string;
   links?: Array<{ text: string; href: string; badge?: boolean; icon?: boolean }>;
+}
+
+
+interface DesignProjectItem {
+  title: string;
+  date: string;
+  description: string;
+  pictureSrc1: string;
+  videoSrc1: string;
+  videoSrc2: string;
+  buttonName: string;
+}
+
+function DesignProjectItem({ title, date, description, pictureSrc1, videoSrc1, videoSrc2, buttonName }: DesignProjectItem) {
+  return (
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
+        {/* 第一张图  */}
+        <div>
+          <img
+            src={pictureSrc1}
+            alt={title}
+            className="w-full h-full object-cover aspect-[4/3]"
+          />
+        </div>
+
+        {/* 第二张图  */}
+        <div>
+          <video
+            src={videoSrc1}
+            autoPlay
+            muted
+            loop
+            className="w-full h-full object-cover aspect-[4/3]"
+          />
+        </div>
+
+        {/* 第三张图  */}
+        <div>
+          {/* <img src="/assets/sample.png" className="w-full h-full object-cover aspect-[4/3]" alt="" /> */}
+          <video
+            src={videoSrc2}
+            autoPlay
+            muted
+            loop
+            className="w-full h-full object-cover aspect-[4/3]"
+          />
+        </div>
+
+        {/* 文字部分 */}
+        {/* <div className="sm:col-span-1 lg:col-span-3"> */}
+        <div className="flex flex-col">
+          <p className="text-base font-medium mb-2 leading-tight">{title}</p>
+          <p className="text-sm text-white/40">{date}</p>
+        </div>
+
+        {/* <div className="sm:col-span-1 lg:col-span-3"> */}
+        <div className="flex flex-col gap-2">
+          <p className="text-base font-sm mb-2 leading-tight">{description}</p>
+          <Link
+            href="/project"
+            className="text-sm font-medium hover:opacity-70 transition-opacity inline-flex items-center gap-2"
+          >{buttonName}</Link>
+        </div>
+        {/* <div className="sm:col-span-1 lg:col-span-3">
+      </div> */}
+        <div className="flex flex-col gap-2">
+        </div>
+      </div>
+  )
 }
 
 function PortfolioItem({ title, date, description, thumbnail, links }: PortfolioItemProps) {

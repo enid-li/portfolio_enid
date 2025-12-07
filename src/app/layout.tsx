@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import ClientBody from "./ClientBody";
-import Header from "./header/page";
+import { Navigation } from "@/components/Navigation";
 
 export const metadata: Metadata = {
   title: "Portfolio - Product Designer",
@@ -16,8 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-          {children}
+        <Navigation />
+        {children}
       </body>
     </html>
   );

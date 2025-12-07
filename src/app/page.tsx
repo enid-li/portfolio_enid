@@ -7,6 +7,7 @@ import { ArrowUpRight, ArrowRight, Menu, Sparkles } from 'lucide-react';
 import { motion, } from 'framer-motion';
 import { CustomCursor } from '@/components/CustomCursor';
 import { ParticleBackground } from '@/components/ParticleBackground';
+import { Footer } from '@/components/Footer';
 
 // ... (保留之前的 COLORS, HOVER_COLORS, CustomCursor, ParticleBackground 代码不变) ...
 const COLORS = {
@@ -52,7 +53,7 @@ function MediaContent({ src, type, alt = "project media", className = "" }: Medi
 }
 
 
-// 3. Glass Project Card (修改版：单张大图/视频)
+// 3. Glass Project Card (修改版：支持单张或多张媒体)
 interface SingleMediaItem {
     src: string;
     type: 'image' | 'video';
@@ -62,13 +63,13 @@ function GlassProjectCard({
     title,
     category,
     description,
-    media, // 变量名从 images 改为 media，接受单个对象
+    media, // 现在接受单个或多个媒体项
     href
 }: {
     title: string,
     category: string,
     description: string,
-    media: SingleMediaItem,
+    media: SingleMediaItem | SingleMediaItem[], // 可以是单个或数组
     href: string
 }) {
     const defaultBg = 'rgba(255, 255, 255, 0.4)';
@@ -82,6 +83,9 @@ function GlassProjectCard({
         setActiveBg(defaultBg);
     };
 
+    // 将单个媒体转换为数组以统一处理
+    const mediaArray = Array.isArray(media) ? media : [media];
+
     return (
         <Link href={href} className="group relative block w-full h-full">
             <motion.div
@@ -94,16 +98,18 @@ function GlassProjectCard({
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="h-full rounded-3xl backdrop-blur-md border border-white/50 shadow-sm hover:shadow-xl hover:shadow-black/5 overflow-hidden flex flex-col"
             >
-                {/* Media Area - 现在是单个大窗口 */}
-                <div className="relative p-4 w-full aspect-video">
-                    <div className="relative w-full h-full rounded-xl overflow-hidden bg-gray-100">
-                        <MediaContent
-                            src={media.src}
-                            type={media.type}
-                            alt={title}
-                            className="transition-transform duration-700 group-hover:scale-105"
-                        />
-                    </div>
+                {/* Media Area - 支持多张图片的网格 */}
+                <div className={`relative p-4 w-full gap-2 grid ${mediaArray.length === 1 ? 'grid-cols-1' : mediaArray.length === 2 ? 'grid-cols-2' : 'grid-cols-3'}`} style={{ aspectRatio: '16/9' }}>
+                    {mediaArray.map((item, index) => (
+                        <div key={index} className="relative rounded-xl overflow-hidden bg-gray-100 w-full h-full">
+                            <MediaContent
+                                src={item.src}
+                                type={item.type}
+                                alt={`${title} - ${index + 1}`}
+                                className="transition-transform duration-700 group-hover:scale-105"
+                            />
+                        </div>
+                    ))}
                 </div>
 
                 {/* Content Area */}
@@ -118,7 +124,7 @@ function GlassProjectCard({
                                 <ArrowUpRight className="w-5 h-5" />
                             </div>
                         </div>
-                        <p className="text-gray-900 text-sm leading-relaxed line-clamp-2 mix-blend-hard-light font-medium">{description}</p>
+                        <p className="text-gray-900 text-sm leading-relaxed mix-blend-hard-light font-medium whitespace-pre-wrap">{description}</p>
                     </div>
                 </div>
             </motion.div>
@@ -189,7 +195,7 @@ function GlassProjectCardHorizontal({
                                 <ArrowUpRight className="w-5 h-5" />
                             </div>
                         </div>
-                        <p className="text-gray-900 text-sm leading-relaxed line-clamp-2 mix-blend-hard-light font-medium">{description}</p>
+                        <p className="text-gray-900 text-sm leading-relaxed mix-blend-hard-light font-medium whitespace-pre-wrap">{description}</p>
                     </div>
                 </div>
             </motion.div>
@@ -226,129 +232,6 @@ function HeroDoodles() {
 }
 
 // --- MAIN PAGE (Updated Data Structure) ---
-// 1. Jelly Cursor 组件代码
-// function CustomCursor() {
-//   const cursorX = useMotionValue(-100);
-//   const cursorY = useMotionValue(-100);
-
-//   const springConfig = { damping: 25, stiffness: 700 };
-//   const cursorXSpring = useSpring(cursorX, springConfig);
-//   const cursorYSpring = useSpring(cursorY, springConfig);
-
-//   const [isHovering, setIsHovering] = useState(false);
-
-//   useEffect(() => {
-//     const moveCursor = (e: MouseEvent) => {
-//       cursorX.set(e.clientX - 16);
-//       cursorY.set(e.clientY - 16);
-//     };
-
-//     const handleMouseOver = (e: MouseEvent) => {
-//       const target = e.target as HTMLElement;
-//       if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.closest('a') || target.closest('button')) {
-//         setIsHovering(true);
-//       } else {
-//         setIsHovering(false);
-//       }
-//     };
-
-//     window.addEventListener('mousemove', moveCursor);
-//     window.addEventListener('mouseover', handleMouseOver);
-
-//     return () => {
-//       window.removeEventListener('mousemove', moveCursor);
-//       window.removeEventListener('mouseover', handleMouseOver);
-//     };
-//   }, [cursorX, cursorY]);
-
-//   return (
-//     <motion.div
-//       className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-black pointer-events-none z-[9999] hidden md:block mix-blend-difference bg-white"
-//       style={{ x: cursorXSpring, y: cursorYSpring }}
-//       animate={{ scale: isHovering ? 2.5 : 1, opacity: 1 }}
-//       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-//     />
-//   );
-// }
-
-// // 2. Particle Background 组件代码
-// function ParticleBackground() {
-//   const canvasRef = useRef<HTMLCanvasElement>(null);
-
-//   useEffect(() => {
-//     const canvas = canvasRef.current;
-//     if (!canvas) return;
-//     const ctx = canvas.getContext('2d');
-//     if (!ctx) return;
-
-//     let animationFrameId: number;
-//     let particles: Array<{ x: number, y: number, vx: number, vy: number, size: number }> = [];
-
-//     const resize = () => {
-//       canvas.width = window.innerWidth;
-//       canvas.height = window.innerHeight;
-//       initParticles();
-//     };
-
-//     const initParticles = () => {
-//       particles = [];
-//       const particleCount = window.innerWidth < 768 ? 20 : 50;
-//       for (let i = 0; i < particleCount; i++) {
-//         particles.push({
-//           x: Math.random() * canvas.width,
-//           y: Math.random() * canvas.height,
-//           vx: (Math.random() - 0.5) * 0.5,
-//           vy: (Math.random() - 0.5) * 0.5,
-//           size: Math.random() * 3 + 1,
-//         });
-//       }
-//     };
-
-//     let mouse = { x: -1000, y: -1000 };
-
-//     const animate = () => {
-//       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-//       particles.forEach((p, i) => {
-//         p.x += p.vx;
-//         p.y += p.vy;
-//         if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
-//         if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
-
-//         const dx = mouse.x - p.x;
-//         const dy = mouse.y - p.y;
-//         const distance = Math.sqrt(dx * dx + dy * dy);
-//         const maxDistance = 150;
-
-//         if (distance < maxDistance) {
-//           const force = (maxDistance - distance) / maxDistance;
-//           p.x -= (dx / distance) * force * 2;
-//           p.y -= (dy / distance) * force * 2;
-//         }
-
-//         ctx.beginPath();
-//         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-//         ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
-//         ctx.fill();
-//       });
-
-//       animationFrameId = requestAnimationFrame(animate);
-//     };
-
-//     window.addEventListener('resize', resize);
-//     window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; });
-
-//     resize();
-//     animate();
-
-//     return () => {
-//       window.removeEventListener('resize', resize);
-//       cancelAnimationFrame(animationFrameId);
-//     };
-//   }, []);
-
-//   return <canvas ref={canvasRef} className="fixed inset-0 z-0 pointer-events-none" />;
-// }
 export default function Home() {
     return (
         <div className="min-h-screen bg-gray-50 text-black selection:bg-black selection:text-white cursor-none font-sans">
@@ -405,7 +288,7 @@ export default function Home() {
                 {/* 2. Grid Layout */}
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
 
-                    {/*项目1*/}
+                    {/*项目1 - Single Media*/}
                     <GlassProjectCard
                         title="Dora.ai"
                         category="AI Product Design"
@@ -413,35 +296,36 @@ export default function Home() {
                         href="/project/dora"
                         media={{
                             type: 'video',
-                            src: "/assets/dora_ai_main.mp4" // 替换为实际视频路径
+                            src: "/assets/dora_ai_main.mp4"
                         }}
                     />
 
-                    {/*项目2*/}
+                    {/*项目2 - Multiple Media (2 images)*/}
                     <GlassProjectCard
                         title="Workflow Tool"
                         category="UX Architecture"
                         description="Blurring abstraction boundaries and making workflows feel more connected."
                         href="/project/workflow"
-                        media={{
-                            type: 'image',
-                            src: "https://placehold.co/800x600/f3f4f6/374151/png?text=Workflow"
-                        }}
+                        media={[
+                            { type: 'image', src: "https://placehold.co/400x300/f3f4f6/374151/png?text=Workflow+1" },
+                            { type: 'image', src: "https://placehold.co/400x300/e5e7eb/4b5563/png?text=Workflow+2" }
+                        ]}
                     />
 
-                    {/*项目3*/}
+                    {/*项目3 - Multiple Media (3 images)*/}
                     <GlassProjectCard
                         title="Pro Nudges"
                         category="Growth Design"
                         description="Contextual nudges that appear naturally in the user journey."
                         href="/project/nudges"
-                        media={{
-                            type: 'image',
-                            src: "https://placehold.co/800x600/fff7ed/ea580c/png?text=Growth"
-                        }}
+                        media={[
+                            { type: 'image', src: "https://placehold.co/300x300/fff7ed/ea580c/png?text=Growth+1" },
+                            { type: 'image', src: "https://placehold.co/300x300/ffedd5/f97316/png?text=Growth+2" },
+                            { type: 'image', src: "https://placehold.co/300x300/fed7aa/fb923c/png?text=Growth+3" }
+                        ]}
                     />
 
-                    {/*项目4*/}
+                    {/*项目4 - Single Media*/}
                     <GlassProjectCard
                         title="Design System"
                         category="Infrastructure"
@@ -508,7 +392,7 @@ export default function Home() {
                     </div>
                 </section>
 
-                <footer className="bg-[#E2F175] rounded-3xl py-20 px-8">
+                {/* <footer className="bg-[#E2F175] rounded-3xl py-20 px-8">
                     <a
                         href="mailto:hello@enidli.com"
                         className="group relative inline-flex flex-col items-center gap-4 w-full justify-center"
@@ -518,7 +402,28 @@ export default function Home() {
                         </span>
                         <span className="text-sm text-gray-700">Let's build something fun.</span>
                     </a>
-                </footer>
+                </footer> */}
+                  <div className="border-t border-gray-200 mt-32 pt-16">
+                    <p className="text-center text-gray-400 text-sm font-bold uppercase tracking-wider mb-8">Next Project</p>
+
+                    <Link href="/project/workflow" className="group block max-w-4xl mx-auto">
+                        <motion.div
+                            whileHover={{ scale: 0.98 }}
+                            className="relative rounded-3xl overflow-hidden bg-[#E2F175] aspect-[21/9] flex items-center justify-center border border-black/5"
+                        >
+                            <div className="text-center z-10">
+                                <h3 className="text-4xl md:text-6xl font-bold text-black mb-2 group-hover:underline decoration-4 underline-offset-4 decoration-[#F79CEF]">Workflow Tool</h3>
+                                <p className="text-black/60 font-medium">UX Architecture</p>
+                            </div>
+
+                            {/* Decorative Doodles for Next Project Card */}
+                             <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity">
+                                <Sparkles className="absolute top-10 left-10 w-24 h-24 text-black" />
+                                <ArrowRight className="absolute bottom-10 right-10 w-24 h-24 text-black -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
+                            </div>
+                        </motion.div>
+                    </Link>
+                 </div> 
             </main>
         </div>
     );

@@ -33,39 +33,50 @@ export function CaseStudySection({ media, layout, subtitle, title, description }
                             ))}
                         </div>
                     )}
+
                 </div>
             )}
 
-            {/* Media Block - Optional */}
+            {/* Media Block */}
             {mediaArray.length > 0 && (
-                <div className={`grid gap-6 ${mediaArray.length > 1 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1'}`}>
-                    {mediaArray.map((item, idx) => (
-                        <div
-                            key={idx}
-                            className={`relative rounded-3xl overflow-hidden border border-white/50 shadow-sm
-                  ${mediaArray.length === 1 ? 'aspect-video' : 'aspect-[4/3]'}
-                  ${mediaArray.length === 1 ? 'bg-gray-100' : 'bg-gray-100'}
-                `}
-                        >
-                            {item.type === 'video' ? (
-                                <video
-                                    src={item.src}
-                                    autoPlay muted loop playsInline
-                                    className="w-full h-full object-cover" />
-                            ) : (
-                                <Image
-                                    src={item.src}
-                                    alt={item.alt || 'Project image'}
-                                    fill
-                                    className="object-cover transition-transform duration-700 hover:scale-105" />
-                            )}
-                            {item.caption && (
-                                <div className="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md p-3 rounded-xl text-xs font-medium text-gray-600 border border-white/20">
-                                    {item.caption}
-                                </div>
-                            )}
-                        </div>
-                    ))}
+                <div className={`grid gap-6 ${mediaArray.length > 1 ? 'grid-cols-1' : 'grid-cols-1'}`}>
+                    {mediaArray.map((item, idx) => {
+                        // 👇 修改 1: 获取 fit 属性 (如果没有传，默认还是 'cover')
+                        // 使用 (item as any) 是为了不让你去修改 TypeScript 类型定义文件，实现最小改动
+                        const objectFit = item.fit === 'contain' ? 'object-contain' : 'object-cover';
+
+                        return (
+                            <div
+                                key={idx}
+                                className={`relative border border-white/50 shadow-sm
+                                    ${mediaArray.length === 1 ? 'aspect-video' : 'aspect-[16/9]'}
+                                    ${mediaArray.length === 1 ? 'bg-gray-100' : 'bg-gray-100'}
+                                `}
+                            >
+                                {item.type === 'video' ? (
+                                    <video
+                                        src={item.src}
+                                        autoPlay muted loop playsInline
+                                        // 👇 修改 2: 给视频也加上这个类名
+                                        className={`w-full h-full ${objectFit}`}
+                                    />
+                                ) : (
+                                    <Image
+                                        src={item.src}
+                                        alt={item.alt || 'Project image'}
+                                        fill
+                                        // 👇 修改 3: 将 'object-cover' 替换为变量 ${objectFit}
+                                        className={`${objectFit} transition-transform duration-700 hover:scale-105`}
+                                    />
+                                )}
+                                {item.caption && (
+                                    <div className="absolute bottom-4 left-4 right-4 bg-white/80 backdrop-blur-md p-3 rounded-xl text-xs font-medium text-gray-600 border border-white/20">
+                                        {item.caption}
+                                    </div>
+                                )}
+                            </div>
+                        )
+                    })}
                 </div>
             )}
         </motion.section>

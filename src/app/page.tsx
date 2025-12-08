@@ -288,27 +288,26 @@ export default function Home() {
                 {/* 2. Grid Layout */}
                 <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
 
-                    {/*项目1 - Single Media*/}
+                    {/*项目1 - Dora AI*/}
                     <GlassProjectCard
                         title="Dora.ai"
-                        category="AI Product Design"
-                        description="Designed the editing system and shipped GenAI features. A new editor for marketers and brand designers."
+                        category="AI no-code web builder"
+                        description="Designed Dora AI features beta version, enabling a natural-language-driven 3D website creation experience."
                         href="/project/dora"
                         media={{
-                            type: 'video',
-                            src: "/assets/dora_ai_main.mp4"
+                            type: 'image',
+                            src: "/assets/dora_ai.jpg"
                         }}
                     />
 
-                    {/*项目2 - Multiple Media (2 images)*/}
+                    {/*项目2 - Nicelyformed*/}
                     <GlassProjectCard
-                        title="Workflow Tool"
-                        category="UX Architecture"
-                        description="Blurring abstraction boundaries and making workflows feel more connected."
-                        href="/project/workflow"
+                        title="Nicelyformed"
+                        category="AI form builder"
+                        description="Nicelyformed is an AI chatbot for form generations, eliminating the tedium of manual field input and logic configuration. "
+                        href="/project/nicelyformed"
                         media={[
-                            { type: 'image', src: "https://placehold.co/400x300/f3f4f6/374151/png?text=Workflow+1" },
-                            { type: 'image', src: "https://placehold.co/400x300/e5e7eb/4b5563/png?text=Workflow+2" }
+                            { type: 'image', src: "/assets/nicelyformed_hero.JPG" },
                         ]}
                     />
 

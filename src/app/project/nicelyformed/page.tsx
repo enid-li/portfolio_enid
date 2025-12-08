@@ -43,11 +43,10 @@ export default function ProjectDetail() {
               <span className="text-xs font-bold tracking-widest uppercase text-gray-500">AI Product Design</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tighter leading-none mb-8 text-black">
-              <span>Dora AI Editor</span>
+              <span>Nicelyformed AI</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-500 font-medium leading-relaxed mb-12">
-              Redefining how to build 3D interactive websites using LLMs & Generative AI.
-              From a prompt to a fully editable 3D scene in seconds.
+            NicelyFormed transforms natural language into production-ready forms in seconds, replacing tedious manual construction with a smart CUI.
             </p>
 
             {/* Project Stats / Metadata */}
@@ -58,15 +57,15 @@ export default function ProjectDetail() {
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Timeline</p>
-                <p className="font-semibold">Oct. 2023 - Apr. 2024</p>
+                <p className="font-semibold">August. 2023 - feb. 2024</p>
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Team</p>
-                <p className="font-semibold">6 Devs, 1 PM, 2 UX</p>
+                <p className="font-semibold">3 Devs, 1 PM, 2 UX</p>
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Impact</p>
-                <p className="font-semibold">20k+ Users Acquired</p>
+                <p className="font-semibold">10k+ Users Acquired</p>
               </div>
             </div>
           </motion.div>
@@ -81,7 +80,7 @@ export default function ProjectDetail() {
         >
           {/* Placeholder for Main Hero Video/Image */}
           <img
-            src="/assets/dora_ai_editor.png"
+            src="/assets/NF V0 cover page.png"
             className="w-full h-full object-cover"
           // autoPlay muted loop playsInline
           // poster="https://placehold.co/1920x1080/e2e8f0/64748b/png?text=Loading+Media..."
@@ -92,12 +91,16 @@ export default function ProjectDetail() {
 
         {/* --- CASE STUDY CONTENT SECTIONS --- */}
 
-        {/* Section 1: Background */}
+        {/* Section 1: MVP */}
         <CaseStudySection
-          subtitle="Background"
-          title="Why Natual-language-driven 3D Web Design?"
-          description={`Dora是一个兼容3D及其动画效果的无代码建站平台。然而，传统的“拖拽式”工作流仍动手门槛较高，制作周期过长。而Dora的核心客群（小型工作室及个人 IP 创作者）需求为快速制作、高效交付，而非“从零构建”。
-            随着LLMs的兴起，我们看到了三方建站由“手动构建”转向“自然语言驱动生成”的机会。Dora AI的目标是进一步降低建站门槛，允许用户通过自然语言生成高保真网站。`}
+          subtitle="Dashboard MVP"
+          title="What to include in the dashbaord?"
+          description={`我们一开始对产品有一个基本的构想：以用户熟悉的LLM布局为基础，结合表单生成的核心功能，设计一个简洁高效的Dashboard界面。这降低了用户的学习门槛，让他们在熟悉的框架内探索新的生成能力，而不是一开始就面对完全陌生的界面。`}
+            media={{
+              type: 'image',
+              src: '/assets/MVP version.png',
+              fit: 'contain'
+            }}
         />
 
         {/* Section 1: Challenges */}

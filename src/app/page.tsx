@@ -302,25 +302,23 @@ export default function Home() {
 
                     {/*项目2 - Nicelyformed*/}
                     <GlassProjectCard
-                        title="Nicelyformed"
+                        title="Nicelyformed (MVP)"
                         category="AI form builder"
-                        description="Nicelyformed is an AI chatbot for form generations, eliminating the tedium of manual field input and logic configuration. "
+                        description="Nicelyformed is an AI chatbot for form generations, enabling users to instantly generate surveys from a single natural language prompt."
                         href="/project/nicelyformed"
                         media={[
                             { type: 'image', src: "/assets/nicelyformed_hero.JPG" },
                         ]}
                     />
 
-                    {/*项目3 - Multiple Media (3 images)*/}
+                    {/*项目3 - Nicelyforme.v1*/}
                     <GlassProjectCard
-                        title="Pro Nudges"
-                        category="Growth Design"
-                        description="Contextual nudges that appear naturally in the user journey."
+                        title="Nicelyformed (V1)"
+                        category="AI form builder"
+                        description="V1 introduced a dynamic Conversational User Interface (CUI) for iterative refinement, empowering users to modify form logic and details through dialogue."
                         href="/project/nudges"
                         media={[
-                            { type: 'image', src: "https://placehold.co/300x300/fff7ed/ea580c/png?text=Growth+1" },
-                            { type: 'image', src: "https://placehold.co/300x300/ffedd5/f97316/png?text=Growth+2" },
-                            { type: 'image', src: "https://placehold.co/300x300/fed7aa/fb923c/png?text=Growth+3" }
+                            { type: 'image', src: "/assets/nicelyformedv1_hero.png" },
                         ]}
                     />
 

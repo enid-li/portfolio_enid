@@ -43,7 +43,7 @@ export default function ProjectDetail() {
               <span className="text-xs font-bold tracking-widest uppercase text-gray-500">AI Product Design</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tighter leading-none mb-8 text-black">
-              <span>Nicelyformed AI</span>
+              <span>Nicelyformed（MVP）</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-500 font-medium leading-relaxed mb-12">
             NicelyFormed transforms natural language into production-ready forms in seconds, replacing tedious manual construction with a smart CUI.
@@ -86,7 +86,7 @@ export default function ProjectDetail() {
           // poster="https://placehold.co/1920x1080/e2e8f0/64748b/png?text=Loading+Media..."
           />
           {/* Overlay Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/5 to-transparent pointer-events-none"></div>
         </motion.div>
 
         {/* --- CASE STUDY CONTENT SECTIONS --- */}
@@ -94,8 +94,10 @@ export default function ProjectDetail() {
         {/* Section 1: MVP */}
         <CaseStudySection
           subtitle="Dashboard MVP"
-          title="What to include in the dashbaord?"
-          description={`我们一开始对产品有一个基本的构想：以用户熟悉的LLM布局为基础，结合表单生成的核心功能，设计一个简洁高效的Dashboard界面。这降低了用户的学习门槛，让他们在熟悉的框架内探索新的生成能力，而不是一开始就面对完全陌生的界面。`}
+          title="What to include in the dashboard?"
+          description={`我们一开始对产品有一个基本的构想：以用户熟悉的LLM布局为基础，结合表单生成的核心功能，设计一个简洁高效的Dashboard界面。这降低了用户的学习门槛，让他们在熟悉的框架内探索新的生成能力，而不是一开始就面对完全陌生的界面。
+            考虑到孤零零的一个prompt会让用户不知所措，所以我们在输入框下方做了templates enties，既满足了高频场景的直接输入需求，也为不知道怎么用的普通用户提供了参照。
+            MVP 阶段我们想先跑通最基础的功能，而避免过度设计，完全聚焦于“意图输入”。复杂的表单编辑功能只有在用户输入指令后才会显现，这旨在让产品轻量且易于上手。`}
             media={{
               type: 'image',
               src: '/assets/MVP version.png',
@@ -103,35 +105,49 @@ export default function ProjectDetail() {
             }}
         />
 
-        {/* Section 1: Challenges */}
+        {/* Section 1: Problems from UX Audit */}
         <CaseStudySection
-          subtitle="Key Chanllenges"
-          title=" Build The Gap in 3D Web Design"
-          description={`新用户经常在初始阶段流失，主要原因为从零开始搭建网站的畏难情绪以及极高的上手成本。如何让用户在Landing page及新建项目页面即可快速体验到AI生成网站的工作流以及其核心价值，成为设计的首要挑战。`}
+          subtitle="UX Audit Findings"
+          title=" Pains & Frustrations"
+          description={`我们在Dashboard的设计上，借助interactive prototype做了UX Audit，发现了以下几个主要问题:
+          a. 视觉层级弱： “更多模板”的按钮缺乏与模版按钮的视觉区分，导致用户将其视为普通模版按钮而非导航控件，从而将其忽略。且当视窗高度降低，更多的按钮不可见了，用户更难发现templates的功能入口。
+          b. 纯文本负荷：仅依赖文字标签迫使用户去“阅读”不同模版的文字信息，这违背了我们要的帮用户“快速输入看效果”的效果。
+          c. 图标语义歧义： “星星”图标存在歧义问题。在当下的技术语境中，用户已建立了将“星星/火花”与“AI 生成”关联的心智模型。将其用于推荐的高频已生成模版按钮中，会误导用户这部分与AI有关联。
+          d. 点击迟疑：对于推荐模版的按钮，用户存在点击迟疑，因为界面未能提供清晰的预览信息。用户无法预判点击模板是会立即生成表单还是打开预览，从而降低了点击的意愿。`}
+          media={{
+            type: 'image',
+            src: '/assets/pains_UX_audit.png',
+            fit: 'contain'
+          }}
         />
 
 
         {/* Section 3: The Solution (Text + Video) */}
         <CaseStudySection
-          subtitle="Early stages"
-          title="Whitelist & Referral Programme"
-          description={`考虑到Dora ai推理及图片生成成本问题，我们选择开放白名单模式以限制早期的使用人数，并计算用户的平均消耗（Unit Economics），从而估算大规模开放后的成本。同时去规避突发的大规模流量导致的崩溃或响应延迟（Latency）。这样一点点拧开流量，以便验证后端架构的承载能力。
-          对于非白名单用户，我们决定仍然保留入口可见。这里利用了FOMO（错失恐惧症）以提高Waitlist的转化率。并且我们也设计了动态刷新的队列号码，希望增加用户回访的动力，进一步提升回访率。`}
-          media={{
+          subtitle="Design Iterations"
+          title="Closing the loop"
+          description={`针对上述问题，我们做了以下设计改进:
+          a. Prompt Bar移至页面顶部的Hero Section，并移除冗余的CTA以消除注意力分散。
+          b. “Create from scratch“按钮降级为三级链接样式，在视觉上进行弱化。
+          c. 纯文本模版标签升级为带有缩略图预览的卡片。旨在为用户提供点击后的心理预期，去解决“点击迟疑”问题。
+          d. 我们移除了静态模版上的“星星”图标，避免了用户混淆“生成式功能”与“预设功能。”
+          这一重组确立了产品“AI Native”的定位。通过建立清晰的视觉焦点，我们引导用户进入“主要路径”（AI 生成），同时保留手动创建作为低干扰的兜底选项。`}
+          media={[
+          {
             type: 'image',
-            src: '/assets/Referral programme.png',
-            caption: 'Join the whitelist & Share for free trial'
-          }}
+            src: '/assets/MVP version_updated.png',
+            fit: 'contain'
+          },
+          ]}  
         />
+
+
 
         {/* Section 4: Design System (Full Width Image) */}
         <CaseStudySection
-          subtitle="Acquisition & Activation"
-          title="Onboarding Flow"
-          description={`Onboarding的设计上，我们给出了双重入口（Dual-Entry Strategy）的设计: 
-          为了让用户在最短时间内触达核心功能，我们对存量用户及增量用户分别设计了两条路径：
-          1）沉浸式交互引导 (登录前): 在Landing Page，我们结合了鼠标scroll-down的交互，去做AI feature使用方法的演示。用户在下滑过程中，就可以高效地掌握产品使用技巧。
-          2）直通式激活弹窗 (登录后): 针对已登录用户，我们在Dashboard内置了带AI feature宣发视频的弹窗，用户一键即可进入AI 工作台。`}
+          subtitle="MVP updates"
+          title="Improvements"
+          description={`根据`}
           media={[
             {
               type: 'video',

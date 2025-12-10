@@ -316,18 +316,18 @@ export default function Home() {
                         title="Nicelyformed (V1)"
                         category="AI form builder"
                         description="V1 introduced a dynamic Conversational User Interface (CUI) for iterative refinement, empowering users to modify form logic and details through dialogue."
-                        href="/project/nudges"
+                        href="/project/nicelyformed_v1"
                         media={[
                             { type: 'image', src: "/assets/nicelyformedv1_hero.png" },
                         ]}
                     />
 
-                    {/*项目4 - Single Media*/}
+                    {/*项目4 - Leap OS app digital carkey*/}
                     <GlassProjectCard
-                        title="Design System"
+                        title="Leap OS 3.0 digital carkey"
                         category="Infrastructure"
                         description="A complete overhaul of the component library to support dark mode and accessibility."
-                        href="/project/system"
+                        href="/project/LeapOS_digital_carkey"
                         media={{
                             type: 'image',
                             src: "https://placehold.co/800x600/fdf4ff/c026d3/png?text=System"

@@ -302,9 +302,9 @@ export default function Home() {
 
                     {/*项目2 - Nicelyformed*/}
                     <GlassProjectCard
-                        title="Nicelyformed (MVP)"
+                        title="Nicelyformed MVP + V1"
                         category="AI form builder"
-                        description="Nicelyformed is an AI chatbot for form generations, enabling users to instantly generate surveys from a single natural language prompt."
+                        description="Nicelyformed is an AI chatbot for form building, enabling users to generate surveys and do the iterations through dialogue."
                         href="/project/nicelyformed"
                         media={[
                             { type: 'image', src: "/assets/nicelyformed_hero.JPG" },

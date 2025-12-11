@@ -43,7 +43,7 @@ export default function ProjectDetail() {
               <span className="text-xs font-bold tracking-widest uppercase text-gray-500">AI Product Design</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tighter leading-none mb-8 text-black">
-              <span>Nicelyformed（MVP）</span>
+              <span>Nicelyformed</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-500 font-medium leading-relaxed mb-12">
             NicelyFormed transforms natural language into production-ready forms in seconds, replacing tedious manual construction with a smart CUI.
@@ -57,7 +57,9 @@ export default function ProjectDetail() {
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Timeline</p>
-                <p className="font-semibold">August. 2023 - feb. 2024</p>
+                <p className="font-semibold">08/23 - 11/24 (MVP) 12/24 - 02/25 (V1)
+                
+                </p>
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Team</p>
@@ -145,20 +147,20 @@ export default function ProjectDetail() {
 
         {/* Section 4: Design System (Full Width Image) */}
         <CaseStudySection
-          subtitle="MVP updates"
-          title="Improvements"
-          description={`根据`}
+          subtitle="V1 updates"
+          title="Human-in-the-Loop"
+          description={`如何将优化表单的工作流结合进用户熟悉LLM布局，是我们在V1设计中的主要挑战。
+            从MVP的“一键生成”进化到V1的“CUI 协同编辑”，这使得我们的产品从一个简单AI生成的工具升级为协同工作流的“助手（Co-pilot）。” 这方便用户精细化他们的表单需求。
+            我们初步将CUI panel设计在中间，并形成了“左侧历史菜单(Menu) - 中间指令(CUI) - 右侧预览(Preview)的”分屏布局。用户在中间输入指令，右侧立刻刷新结果，构成了一条清晰的cause-effect视觉动线及反馈回路。旨在最大程度降低新的交互形式带来的认知负荷。
+            传统的表单工具中，修改复杂的设置数据校验规则、调整跳转逻辑通常是耗时最长的环节。
+            在新的设计中，用户可以输入“如果第六个问题选择A选项和C选项，就跳到第十个问题”这样的自然语言指令，系统会自动帮用户完成复杂的逻辑配置。`}
           media={[
             {
-              type: 'video',
-              src: '/assets/dora_ai_landing_page.mp4',
-              alt: 'Dora ai landing page'
+              type: 'image',
+              src: '/assets/v1_dashboard_CUI.png',
+              alt: 'v1 dashboard with CUI panel',
+              fit: 'contain'
             },           
-            {
-              type: 'video',
-              src: '/assets/get_started_dora_ai.mp4',
-              alt: 'get started with Dora AI',
-            }
           ]}
         />
 

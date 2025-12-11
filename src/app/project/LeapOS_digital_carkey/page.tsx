@@ -121,15 +121,14 @@ export default function ProjectDetail() {
           subtitle="Design Iterations"
           title="Closing the loop"
           description={`针对上述问题，我们做了以下设计改进:
-          a. Prompt Bar移至页面顶部的Hero Section，并移除冗余的CTA以消除注意力分散。
-          b. “Create from scratch“按钮降级为三级链接样式，在视觉上进行弱化。
-          c. 纯文本模版标签升级为带有缩略图预览的卡片。旨在为用户提供点击后的心理预期，去解决“点击迟疑”问题。
-          d. 我们移除了静态模版上的“星星”图标，避免了用户混淆“生成式功能”与“预设功能。”
-          这一重组确立了产品“AI Native”的定位。通过建立清晰的视觉焦点，我们引导用户进入“主要路径”（AI 生成），同时保留手动创建作为低干扰的兜底选项。`}
+          a. 
+          b. 
+          c. 
+          `}
           media={[
           {
             type: 'image',
-            src: '/assets/MVP version_updated.png',
+            src: '/assets/Improvements_ble_carkey.png',
             fit: 'contain'
           },
           ]}  

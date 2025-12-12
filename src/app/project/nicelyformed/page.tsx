@@ -167,22 +167,31 @@ export default function ProjectDetail() {
         {/* Section 5: Conclusion */}
         <CaseStudySection
           subtitle="Design iterations"
-          title="Tags or not?"
-          description={`在“Gain more credits“的设计上，我们发现引入显性标签（Upgrade the plan & Refer a friend）虽然增加了清晰的信息分类，但也引入了不必要的视觉噪音（Visual Noise）。 继而我们通过增加卡片的对比度作为分类暗示，标签的功能变得冗余。
-            移除标签显著提升了界面的信噪比（Signal-to-Noise Ratio），让用户的视线能直接聚焦于核心价值（crerdits）和行动点（Upgrade & Share），而不是浪费精力去处理辅助性的层级信息。与其把所有东西都标出来，不如让context代替labeling自己说话。`}
+          title="Where to put version management?"
+          description={`对于在哪里维护历史版本切换的控件，我们初步给出了四个方案，并对每一个方案进行了Hypothesis、Pros & Cons的探讨。`}
           media={[
-            // {
-            //   type: 'image',
-            //   src: '/assets/iterations_share.png', 
-            //   alt: '[Copy link & Share] visual exploration',
-            //   caption: '[Copy link & Share] visual exploration',
-            //   fit: 'contain',
-            // },
             {
               type: 'image',
-              src: '/assets/iterations_referral.png',
-              alt: '[Refer & Gain more credits] visual exploration',
-              caption: '[Refer & Gain more credits] visual exploration',
+              src: '/assets/version management.png', 
+              alt: '[Copy link & Share] visual exploration',
+              fit: 'contain',
+            },
+            {
+              type: 'image',
+              src: '/assets/Option A&B.png',
+              alt: 'version management feature placement comparison',
+              fit: 'contain',
+            },
+            {
+              type: 'image',
+              src: '/assets/Option C&D.png',
+              alt: 'version management feature placement comparison',
+              fit: 'contain',
+            },
+            {
+              type: 'image',
+              src: '/assets/Comparison_CN.png',
+              alt: 'version management feature placement comparison',
               fit: 'contain',
             }
           ]}

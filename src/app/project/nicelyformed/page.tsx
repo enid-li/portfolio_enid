@@ -46,7 +46,7 @@ export default function ProjectDetail() {
               <span>Nicelyformed</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-500 font-medium leading-relaxed mb-12">
-            NicelyFormed transforms natural language into production-ready forms in seconds, replacing tedious manual construction with a smart CUI.
+              NicelyFormed transforms natural language into production-ready forms in seconds, replacing tedious manual construction with a smart CUI.
             </p>
 
             {/* Project Stats / Metadata */}
@@ -58,7 +58,7 @@ export default function ProjectDetail() {
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Timeline</p>
                 <p className="font-semibold">08/23 - 11/24 (MVP) 12/24 - 02/25 (V1)
-                
+
                 </p>
               </div>
               <div>
@@ -100,11 +100,11 @@ export default function ProjectDetail() {
           description={`我们一开始对产品有一个基本的构想：以用户熟悉的LLM布局为基础，结合表单生成的核心功能，设计一个简洁高效的Dashboard界面。这降低了用户的学习门槛，让他们在熟悉的框架内探索新的生成能力，而不是一开始就面对完全陌生的界面。
             考虑到孤零零的一个prompt会让用户不知所措，所以我们在输入框下方做了templates enties，既满足了高频场景的直接输入需求，也为不知道怎么用的普通用户提供了参照。
             MVP 阶段我们想先跑通最基础的功能，而避免过度设计，完全聚焦于“意图输入”。复杂的表单编辑功能只有在用户输入指令后才会显现，这旨在让产品轻量且易于上手。`}
-            media={{
-              type: 'image',
-              src: '/assets/MVP version.png',
-              fit: 'contain'
-            }}
+          media={{
+            type: 'image',
+            src: '/assets/MVP version.png',
+            fit: 'contain'
+          }}
         />
 
         {/* Section 1: Problems from UX Audit */}
@@ -135,12 +135,12 @@ export default function ProjectDetail() {
           d. 我们移除了静态模版上的“星星”图标，避免了用户混淆“生成式功能”与“预设功能。”
           这一重组确立了产品“AI Native”的定位。通过建立清晰的视觉焦点，我们引导用户进入“主要路径”（AI 生成），同时保留手动创建作为低干扰的兜底选项。`}
           media={[
-          {
-            type: 'image',
-            src: '/assets/MVP version_updated.png',
-            fit: 'contain'
-          },
-          ]}  
+            {
+              type: 'image',
+              src: '/assets/MVP version_updated.png',
+              fit: 'contain'
+            },
+          ]}
         />
 
 
@@ -160,7 +160,7 @@ export default function ProjectDetail() {
               src: '/assets/v1_dashboard_CUI.png',
               alt: 'v1 dashboard with CUI panel',
               fit: 'contain'
-            },           
+            },
           ]}
         />
 
@@ -172,7 +172,7 @@ export default function ProjectDetail() {
           media={[
             {
               type: 'image',
-              src: '/assets/version management.png', 
+              src: '/assets/version management.png',
               alt: '[Copy link & Share] visual exploration',
               fit: 'contain',
             },
@@ -198,15 +198,44 @@ export default function ProjectDetail() {
         />
 
         <CaseStudySection
-          subtitle="Cold Start Problem"
-          title="Reduce Blank Canvas Paralysis"
-          description={`在Dora AI冷启动阶段，主要的设计目标为尽量降低用户对0-1建站的畏难心理，期望借力AI快速生成期望网站的基本布局，并引导用户进行后续的修改。根据竞品调研，我们发现如Webflow、Wix等平台均提供了丰富的模板库供用户选择，以减少从零开始设计的难度。但是Dora仍然在起步阶段，没有一个十分强大的社群来提供海量UGC模板。
-            因此我们决定通过AI生成多样化的网站模板，用户只需提供简单的文本描述，系统即可生成符合其需求的3D网站布局。这种方式旨在降低了设计门槛，帮助他们专注于细节微调，从而在极短时间内达成最终交付。`}
-          media={{
-            type: 'video',
-            src: '/assets/dora_ai_main.mp4',
-            alt: 'Cold-start AI feature'
-          }}
+          subtitle="B2B Empowerment"
+          title="Branding Customization"
+          description={`考虑到B端用户对自己的品牌视觉有自主的需要，我们在results panel顶部引入了专属的品牌识别模块（自定义cover与 Logo）。这主要有三个作用：         
+            1）加强了B端用户表单填写者对品牌的识别度，进而提升表单的完成率（Completion Rate）。
+            2) 显性的品牌标识（Logo/封面）作为视觉锚点,能够验证发起者的身份的合法性，从而提升受访者对数据安全的信任度。
+            3）每一个被分发的表单都转化为一个微型营销渠道，在数字生态中持续强化品牌认知。这可以提升B端用户对Nicelyformed平台的忠诚度与依赖感，促进长期使用与续订。`}
+          media={[
+            {
+              type: 'image',
+              src: '/assets/cover_change.png',
+              alt: 'nicelfotmed branding customization feature',
+              fit: 'contain',
+            },
+            {
+              type: 'image',
+              src: '/assets/covers.png',
+              alt: 'nicelfotmed branding customization feature cover examples',
+              fit: 'contain',
+            }
+          ]}
+        />
+
+        <CaseStudySection
+          subtitle="Design iterations"
+          title="Tags or not?"
+          description={`在Cover change气泡卡片的原设计上，我们将Preset和Custom的上传通道用tag做了区分。并把Preset放在了优先级更高的首屏位置。
+            在外部设计评审的反馈中，我们得知用户对Preset的认知度远低于Custom上传。大部分用户并不会用nicelyformed提供的封面，而是倾向于上传自己的品牌封面。
+            同时，Preset和Custom因为内容量差异较大，导致切换tab的时候有明显跳变，影响了用户体验。
+            故我们把层级扁平化，提升了custom通道的层级，并新增了高频率使用的history来存放用户曾经上传过的cover，方便用户快速切换。同时把History、Preset和Custom合并在一起，用户可以在同一个视图下选择预设或上传。
+            这样旨在更好地契合B端用户的使用习惯，提升品牌定制化的效率。明确封面定制的主要目的是“品牌识别”而不是成为“装饰工具”。`}
+          media={[
+            {
+              type: 'image',
+              src: '/assets/cover_change_feature.png',
+              alt: 'nicelfotmed branding customization feature before and after',
+              fit: 'contain',
+            }
+          ]}
         />
 
         {/* Next Project Footer */}

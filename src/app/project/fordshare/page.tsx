@@ -40,32 +40,32 @@ export default function ProjectDetail() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 bg-white/50 backdrop-blur-md mb-6">
               <span className="w-2 h-2 rounded-full bg-[#13A71D]"></span>
-              <span className="text-xs font-bold tracking-widest uppercase text-gray-500">AI Product Design</span>
+              <span className="text-xs font-bold tracking-widest uppercase text-gray-500">co</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tighter leading-none mb-8 text-black">
-              <span>Nicelyformed（MVP）</span>
+              <span>Ford Share</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-500 font-medium leading-relaxed mb-12">
-            NicelyFormed transforms natural language into production-ready forms in seconds, replacing tedious manual construction with a smart CUI.
+            Fordshare is a community-driven mobile platform that tackles rural EV range anxiety and accessibility.
             </p>
 
             {/* Project Stats / Metadata */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-white/40 backdrop-blur-md rounded-2xl border border-white/50 text-left">
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Role</p>
-                <p className="font-semibold">Product Designer</p>
+                <p className="font-semibold">Service Designer</p>
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Timeline</p>
-                <p className="font-semibold">August. 2023 - feb. 2024</p>
+                <p className="font-semibold">Jan. 2023 - May 2024</p>
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Team</p>
-                <p className="font-semibold">3 Devs, 1 PM, 2 UX</p>
+                <p className="font-semibold">6 HCI Design students</p>
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Impact</p>
-                <p className="font-semibold">10k+ Users Acquired</p>
+                <p className="font-semibold">Ford Official Selection & Exhibited @ Ford London</p>
               </div>
             </div>
           </motion.div>
@@ -80,7 +80,7 @@ export default function ProjectDetail() {
         >
           {/* Placeholder for Main Hero Video/Image */}
           <img
-            src="/assets/NF V0 cover page.png"
+            src="/assets/Fordshare hero.jpg"
             className="w-full h-full object-cover"
           // autoPlay muted loop playsInline
           // poster="https://placehold.co/1920x1080/e2e8f0/64748b/png?text=Loading+Media..."

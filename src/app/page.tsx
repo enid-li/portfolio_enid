@@ -302,7 +302,7 @@ export default function Home() {
 
                     {/*项目2 - Nicelyformed*/}
                     <GlassProjectCard
-                        title="Nicelyformed MVP + V1"
+                        title="Nicelyformed"
                         category="AI form builder"
                         description="Nicelyformed is an AI chatbot for form building, enabling users to generate surveys and do the iterations through dialogue."
                         href="/project/nicelyformed"
@@ -311,26 +311,26 @@ export default function Home() {
                         ]}
                     />
 
-                    {/*项目3 - Nicelyforme.v1*/}
+                    {/*项目3 - FordShare.v1*/}
                     <GlassProjectCard
-                        title="Nicelyformed (V1)"
-                        category="AI form builder"
-                        description="V1 introduced a dynamic Conversational User Interface (CUI) for iterative refinement, empowering users to modify form logic and details through dialogue."
-                        href="/project/nicelyformed_v1"
+                        title="FordShare"
+                        category="Mobility & Transportation"
+                        description="Fordshare is a community-driven mobile platform that tackles rural EV range anxiety and accessibility."
+                        href="/project/fordshare"
                         media={[
-                            { type: 'image', src: "/assets/nicelyformedv1_hero.png" },
+                            { type: 'image', src: "/assets/cover ford.png" },
                         ]}
                     />
 
                     {/*项目4 - Leap OS app digital carkey*/}
                     <GlassProjectCard
                         title="Leap OS 3.0 digital carkey"
-                        category="Infrastructure"
+                        category="Connected Car Experience"
                         description="A complete overhaul of the component library to support dark mode and accessibility."
                         href="/project/LeapOS_digital_carkey"
                         media={{
                             type: 'image',
-                            src: "https://placehold.co/800x600/fdf4ff/c026d3/png?text=System"
+                            src: "/assets/Leapmotor car key hero.png"
                         }}
                     />
                 </section>

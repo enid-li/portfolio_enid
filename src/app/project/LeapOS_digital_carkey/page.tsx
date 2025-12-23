@@ -46,7 +46,7 @@ export default function ProjectDetail() {
               <span>LeapOS 3.0 digital key</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-500 font-medium leading-relaxed mb-12">
-            NicelyFormed transforms natural language into production-ready forms in seconds, replacing tedious manual construction with a smart CUI.
+            Optimized digital carkey system to enhance experience conherency and integrity, delivering a seamless senseless entry experience.
             </p>
 
             {/* Project Stats / Metadata */}
@@ -65,7 +65,7 @@ export default function ProjectDetail() {
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Impact</p>
-                <p className="font-semibold">Adoption Rate increase 5% </p>
+                <p className="font-semibold">Adoption Rate 5% ↑ </p>
               </div>
             </div>
           </motion.div>
@@ -80,7 +80,7 @@ export default function ProjectDetail() {
         >
           {/* Placeholder for Main Hero Video/Image */}
           <img
-            src="/assets/NF V0 cover page.png"
+            src="/assets/Leapmotor car key cover.png"
             className="w-full h-full object-cover"
           // autoPlay muted loop playsInline
           // poster="https://placehold.co/1920x1080/e2e8f0/64748b/png?text=Loading+Media..."
@@ -133,64 +133,7 @@ export default function ProjectDetail() {
           },
           ]}  
         />
-
-
-
-        {/* Section 4: Design System (Full Width Image) */}
-        <CaseStudySection
-          subtitle="MVP updates"
-          title="Improvements"
-          description={`根据`}
-          media={[
-            {
-              type: 'video',
-              src: '/assets/dora_ai_landing_page.mp4',
-              alt: 'Dora ai landing page'
-            },           
-            {
-              type: 'video',
-              src: '/assets/get_started_dora_ai.mp4',
-              alt: 'get started with Dora AI',
-            }
-          ]}
-        />
-
-        {/* Section 5: Conclusion */}
-        <CaseStudySection
-          subtitle="Design iterations"
-          title="Tags or not?"
-          description={`在“Gain more credits“的设计上，我们发现引入显性标签（Upgrade the plan & Refer a friend）虽然增加了清晰的信息分类，但也引入了不必要的视觉噪音（Visual Noise）。 继而我们通过增加卡片的对比度作为分类暗示，标签的功能变得冗余。
-            移除标签显著提升了界面的信噪比（Signal-to-Noise Ratio），让用户的视线能直接聚焦于核心价值（crerdits）和行动点（Upgrade & Share），而不是浪费精力去处理辅助性的层级信息。与其把所有东西都标出来，不如让context代替labeling自己说话。`}
-          media={[
-            // {
-            //   type: 'image',
-            //   src: '/assets/iterations_share.png', 
-            //   alt: '[Copy link & Share] visual exploration',
-            //   caption: '[Copy link & Share] visual exploration',
-            //   fit: 'contain',
-            // },
-            {
-              type: 'image',
-              src: '/assets/iterations_referral.png',
-              alt: '[Refer & Gain more credits] visual exploration',
-              caption: '[Refer & Gain more credits] visual exploration',
-              fit: 'contain',
-            }
-          ]}
-        />
-
-        <CaseStudySection
-          subtitle="Cold Start Problem"
-          title="Reduce Blank Canvas Paralysis"
-          description={`在Dora AI冷启动阶段，主要的设计目标为尽量降低用户对0-1建站的畏难心理，期望借力AI快速生成期望网站的基本布局，并引导用户进行后续的修改。根据竞品调研，我们发现如Webflow、Wix等平台均提供了丰富的模板库供用户选择，以减少从零开始设计的难度。但是Dora仍然在起步阶段，没有一个十分强大的社群来提供海量UGC模板。
-            因此我们决定通过AI生成多样化的网站模板，用户只需提供简单的文本描述，系统即可生成符合其需求的3D网站布局。这种方式旨在降低了设计门槛，帮助他们专注于细节微调，从而在极短时间内达成最终交付。`}
-          media={{
-            type: 'video',
-            src: '/assets/dora_ai_main.mp4',
-            alt: 'Cold-start AI feature'
-          }}
-        />
-
+        
         {/* Next Project Footer */}
         <div className="border-t border-gray-200 mt-32 pt-16">
           <p className="text-center text-gray-400 text-sm font-bold uppercase tracking-wider mb-8">Next Project</p>

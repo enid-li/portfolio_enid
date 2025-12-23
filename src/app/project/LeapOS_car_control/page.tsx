@@ -40,32 +40,32 @@ export default function ProjectDetail() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 bg-white/50 backdrop-blur-md mb-6">
               <span className="w-2 h-2 rounded-full bg-[#13A71D]"></span>
-              <span className="text-xs font-bold tracking-widest uppercase text-gray-500">Mobility & Transportation</span>
+              <span className="text-xs font-bold tracking-widest uppercase text-gray-500">AI Product Design</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tighter leading-none mb-8 text-black">
-              <span>Ford Share</span>
+              <span>LeapOS 3.0 digital key</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-500 font-medium leading-relaxed mb-12">
-            Fordshare is a community-driven mobile platform that tackles rural EV range anxiety and accessibility.
+            NicelyFormed transforms natural language into production-ready forms in seconds, replacing tedious manual construction with a smart CUI.
             </p>
 
             {/* Project Stats / Metadata */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-6 bg-white/40 backdrop-blur-md rounded-2xl border border-white/50 text-left">
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Role</p>
-                <p className="font-semibold">Service Designer</p>
+                <p className="font-semibold">User experience Designer</p>
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Timeline</p>
-                <p className="font-semibold">Jan. 2023 - May 2024</p>
+                <p className="font-semibold">August. 2024 - Jan. 2025</p>
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Team</p>
-                <p className="font-semibold">6 HCI Alumini </p>
+                <p className="font-semibold">4 Devs, 4 PM, 1 UX</p>
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Impact</p>
-                <p className="font-semibold">Ford Official Selection & Exhibited @Ford London</p>
+                <p className="font-semibold">Adoption Rate increase 5% </p>
               </div>
             </div>
           </motion.div>
@@ -80,7 +80,7 @@ export default function ProjectDetail() {
         >
           {/* Placeholder for Main Hero Video/Image */}
           <img
-            src="/assets/Fordshare hero.jpg"
+            src="/assets/NF V0 cover page.png"
             className="w-full h-full object-cover"
           // autoPlay muted loop playsInline
           // poster="https://placehold.co/1920x1080/e2e8f0/64748b/png?text=Loading+Media..."
@@ -91,32 +91,26 @@ export default function ProjectDetail() {
 
         {/* --- CASE STUDY CONTENT SECTIONS --- */}
 
-        {/* Section 1: MVP */}
+        {/* Section 1: 背景 */}
         <CaseStudySection
-          subtitle="Dashboard MVP"
-          title="What to include in the dashboard?"
-          description={`我们一开始对产品有一个基本的构想：以用户熟悉的LLM布局为基础，结合表单生成的核心功能，设计一个简洁高效的Dashboard界面。这降低了用户的学习门槛，让他们在熟悉的框架内探索新的生成能力，而不是一开始就面对完全陌生的界面。
-            考虑到孤零零的一个prompt会让用户不知所措，所以我们在输入框下方做了templates entries，既满足了高频场景的直接输入需求，也为不知道怎么用的普通用户提供了参照。
-            MVP 阶段我们想先跑通最基础的功能，而避免过度设计，完全聚焦于“意图输入”。复杂的表单编辑功能只有在用户输入指令后才会显现，这旨在让产品轻量且易于上手。`}
-            media={{
-              type: 'image',
-              src: '/assets/MVP version.png',
-              fit: 'contain'
-            }}
+          subtitle="Background"
+          title="Adoption Rate Challenges"
+          description={`相比于依赖网络的4G远程解闭锁和需要贴靠的NFC，无感蓝牙钥匙具有近场通信优势，在地下车库等弱网环境下表现高效。然而私有蓝牙钥匙开通率未达预期。
+            蓝牙钥匙团队于24年末下发25年初Over-the-air(OTA)升级任务，目标提升私有蓝牙钥匙功能的开通率和蓝牙解闭锁成功率，从而整体提高用户满意度，缓解地库罚站问题。`}
         />
 
-        {/* Section 1: Problems from UX Audit */}
+        {/* Section 1: Problems*/}
         <CaseStudySection
-          subtitle="UX Audit Findings"
+          subtitle="Pains"
           title=" Pains & Frustrations"
-          description={`我们在Dashboard的设计上，借助interactive prototype做了UX Audit，发现了以下几个主要问题:
-          a. 视觉层级弱： “更多模板”的按钮缺乏与模版按钮的视觉区分，导致用户将其视为普通模版按钮而非导航控件，从而将其忽略。且当视窗高度降低，更多的按钮不可见了，用户更难发现templates的功能入口。
-          b. 纯文本负荷：仅依赖文字标签迫使用户去“阅读”不同模版的文字信息，这违背了我们要的帮用户“快速输入看效果”的效果。
-          c. 图标语义歧义： “星星”图标存在歧义问题。在当下的技术语境中，用户已建立了将“星星/火花”与“AI 生成”关联的心智模型。将其用于推荐的高频已生成模版按钮中，会误导用户这部分与AI有关联。
-          d. 点击迟疑：对于推荐模版的按钮，用户存在点击迟疑，因为界面未能提供清晰的预览信息。用户无法预判点击模板是会立即生成表单还是打开预览，从而降低了点击的意愿。`}
+          description={`我们原设计上做了UX Audit，并结合用户运营侧的一些问题反馈，发现了以下几个主要问题:
+          a. 阻塞的权限引导流程：目前的交互逻辑将“功能开关”与“全量权限引导”进行了强制联动（Forced Linkage），当用户点击开启蓝牙钥匙时，系统会立刻触发一个不可跳过的多页面的权限开启引导流程（Sequential Flow）。
+          用户被迫在“引导页”与“手机系统设置页”之间进行反复的来回跳转（Constant Switching）。只要用户中断了其中任何一步，整个功能就无法开启，极大地增加了操作阻力和流失率。
+          b. 权限丢失诊断流程长：用户在初次跑通流程后，往往会因系统误操作关闭后台权限。由于用户对“权限”与“蓝牙钥匙功能”之间的强依赖关系不明晰，导致钥匙失效时用户茫然。
+          老版本设计用户必须手动点击“故障诊断”进入三级页面做一个耗时的诊断（Time-consuming Session），诊断结果又有较多技术信息露出。这极大地增加了用户恢复功能的认知门槛和时间成本。 `}
           media={{
             type: 'image',
-            src: '/assets/pains_UX_audit.png',
+            src: '/assets/Pains_ble_carkey.png',
             fit: 'contain'
           }}
         />
@@ -127,15 +121,14 @@ export default function ProjectDetail() {
           subtitle="Design Iterations"
           title="Closing the loop"
           description={`针对上述问题，我们做了以下设计改进:
-          a. Prompt Bar移至页面顶部的Hero Section，并移除冗余的CTA以消除注意力分散。
-          b. “Create from scratch“按钮降级为三级链接样式，在视觉上进行弱化。
-          c. 纯文本模版标签升级为带有缩略图预览的卡片。旨在为用户提供点击后的心理预期，去解决“点击迟疑”问题。
-          d. 我们移除了静态模版上的“星星”图标，避免了用户混淆“生成式功能”与“预设功能。”
-          这一重组确立了产品“AI Native”的定位。通过建立清晰的视觉焦点，我们引导用户进入“主要路径”（AI 生成），同时保留手动创建作为低干扰的兜底选项。`}
+          a. 
+          b. 
+          c. 
+          `}
           media={[
           {
             type: 'image',
-            src: '/assets/MVP version_updated.png',
+            src: '/assets/Improvements_ble_carkey.png',
             fit: 'contain'
           },
           ]}  

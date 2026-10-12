@@ -29,7 +29,7 @@
       ".next/types/**/*.ts",
       "next-env.d.ts",
       "build/types/**/*.ts"
-    ],
+, "src/app/project/dora"    ],
     "exclude": ["node_modules"]
   }
   

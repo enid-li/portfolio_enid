@@ -207,9 +207,9 @@ function GlassProjectCardHorizontal({
 function HeroDoodles() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-visible">
-      <svg className="absolute top-[8%] left-[10%] w-[110%] h-[120%] -z-10 overflow-visible" viewBox="0 0 400 120">
+      <svg className="absolute top-[8%] left-[1%] w-[100%] h-[120%] -z-10 overflow-visible" viewBox="0 0 400 120">
         <motion.path
-          d="M 40 40 C 40 40 100 20 200 30 C 300 40 380 60 350 90 C 320 120 100 110 50 90 C 20 70 30 50 40 40"
+          d="M 30 70 A 160 28 0 1 1 350 70 A 160 28 0 1 1 30 70"
           fill="none"
           stroke={COLORS.pink}
           strokeWidth="3"
@@ -250,17 +250,17 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="space-y-6 max-w-4xl mx-auto relative"
           >
-            <p className="text-xl md:text-2xl font-medium max-w-2xl mx-auto pt-6" style={{ color: COLORS.dark, opacity: 0.6 }}>
+            <p className="text-xl md:text-2xl font-medium max-w-2xl mx-auto pt-2" style={{ color: COLORS.dark, opacity: 0.6 }}>
             Hi, I'm Enid Li, a 
             </p> 
-            <h1 className="text-5xl md:text-7xl lg:text-9xl font-semibold tracking-tighter leading-[1.1] text-black" >
+            <h1 className="text-2xl md:text-7xl lg:text-9xl font-semibold tracking-tighter leading-[1.1] text-black" >
               <span className="relative inline-block mr-4">
-                Full-Stack
+                User Experience
                 <HeroDoodles />
               </span>
               <br className="md:hidden" />
               <span className="relative inline-block">
-                Designer.
+                Product Designer.
                 <svg viewBox="0 0 300 15" className="absolute -bottom-2 left-0 w-full h-4" style={{ color: COLORS.green }}>
                   <motion.path
                     d="M 5 10 Q 150 2 295 8"
@@ -292,7 +292,20 @@ export default function Home() {
         <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
 
 
+
           {/*项目1 - Leap OS app digital carkey*/}
+          <GlassProjectCard
+            title="Leap HMI 4.0 Redesign"
+            category="HMI Design"
+            description="Optimized Leap HMI from 3.5+ to 4.0 to enhance experience of quick control of cars, delivering a seamless senseless entry experience."
+            href="/project/Leap_hmi4.0"
+            media={{
+              type: 'image',
+              src: "/assets/Leap HMI 4.0 hero.png"
+            }}
+          />
+
+          {/*项目2 - Leap OS app digital carkey*/}
           <GlassProjectCard
             title="LeapOS Digital Car Key"
             category="Connected Car Experience"
@@ -304,7 +317,7 @@ export default function Home() {
             }}
           />
 
-          {/*项目2 - Leap OS AI car-control*/}
+          {/*项目3 - Leap OS AI car-control*/}
           <GlassProjectCard
             title="LeapOS AI Car-control Agent"
             category="Connected Car Experience"
@@ -315,7 +328,20 @@ export default function Home() {
               src: "/assets/Leapmotor AI car control hero.png"
             }}
           />
-          {/*项目3 - Dora AI*/}
+
+          {/*项目5 - APP Collection*/}
+          <GlassProjectCard
+            title="APP ProjectCollection"
+            category="IoT Design"
+            description="Designed Dora AI features beta version, enabling a natural-language-driven 3D website creation experience."
+            href="/project/Leap_APP_Collection"
+            media={{
+              type: 'image',
+              src: "/assets/Leap APP 3.0 hero.png"
+            }}
+          />
+
+          {/*项目5 - Dora AI*/}
           <GlassProjectCard
             title="Dora.ai"
             category="AI no-code Web Builder"
@@ -327,7 +353,7 @@ export default function Home() {
             }}
           />
 
-          {/*项目4 - Nicelyformed*/}
+          {/*项目6 - Nicelyformed*/}
           <GlassProjectCard
             title="Nicelyformed"
             category="AI Form Builder"
@@ -337,18 +363,6 @@ export default function Home() {
               { type: 'image', src: "/assets/nicelyformed_hero.JPG" },
             ]}
           />
-
-          {/*项目5 - FordShare.v1*/}
-          <GlassProjectCard
-            title="FordShare"
-            category="Mobility & Transportation"
-            description="Fordshare is a community-driven mobile platform that tackles rural EV range anxiety and accessibility."
-            href="/project/fordshare"
-            media={[
-              { type: 'image', src: "/assets/cover ford.png" },
-            ]}
-          />
-
 
         </section>
 
@@ -406,21 +420,21 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <footer className="bg-[#E2F175] rounded-3xl py-20 px-8">
+        <footer className="bg-[#E2F175] rounded-3xl py-20 px-8">
                     <a
                         href="mailto:hello@enidli.com"
                         className="group relative inline-flex flex-col items-center gap-4 w-full justify-center"
                     >
                         <span className="text-3xl md:text-5xl font-semibold tracking-tight text-black group-hover:text-[#13A71D] transition-colors">
-                            hello@enidli.com
+                            xinyuanli12138@outlook.com
                         </span>
                         <span className="text-sm text-gray-700">Let's build something fun.</span>
                     </a>
-                </footer> */}
-        <div className="border-t border-gray-200 mt-32 pt-16">
+                </footer> 
+        {/*<div className="border-t border-gray-200 mt-32 pt-16">
           <p className="text-center text-gray-400 text-sm font-bold uppercase tracking-wider mb-8">Next Project</p>
 
-          <Link href="/project/workflow" className="group block max-w-4xl mx-auto">
+          {/*<Link href="/project/workflow" className="group block max-w-4xl mx-auto">
             <motion.div
               whileHover={{ scale: 0.98 }}
               className="relative rounded-3xl overflow-hidden bg-[#E2F175] aspect-[21/9] flex items-center justify-center border border-black/5"
@@ -430,14 +444,15 @@ export default function Home() {
                 <p className="text-black/60 font-medium">UX Architecture</p>
               </div>
 
-              {/* Decorative Doodles for Next Project Card */}
+              {/* Decorative Doodles for Next Project Card 
               <div className="absolute inset-0 opacity-20 group-hover:opacity-40 transition-opacity">
                 <Sparkles className="absolute top-10 left-10 w-24 h-24 text-black" />
                 <ArrowRight className="absolute bottom-10 right-10 w-24 h-24 text-black -rotate-45 group-hover:rotate-0 transition-transform duration-500" />
               </div>
             </motion.div>
-          </Link>
-        </div>
+           </Link> 
+        </div>*/}
+          
       </main>
     </div>
   );

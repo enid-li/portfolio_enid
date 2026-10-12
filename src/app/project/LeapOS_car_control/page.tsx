@@ -43,7 +43,7 @@ export default function ProjectDetail() {
               <span className="text-xs font-bold tracking-widest uppercase text-gray-500">AI Product Design</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tighter leading-none mb-8 text-black">
-              <span>LeapOS 3.0 digital key</span>
+              <span>LeapOS 3.0 AI car control</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-500 font-medium leading-relaxed mb-12">
             NicelyFormed transforms natural language into production-ready forms in seconds, replacing tedious manual construction with a smart CUI.
@@ -65,7 +65,7 @@ export default function ProjectDetail() {
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Impact</p>
-                <p className="font-semibold">Adoption Rate increase 5% </p>
+                <p className="font-semibold">Adopted by 1 million users </p>
               </div>
             </div>
           </motion.div>
@@ -80,7 +80,7 @@ export default function ProjectDetail() {
         >
           {/* Placeholder for Main Hero Video/Image */}
           <img
-            src="/assets/NF V0 cover page.png"
+            src="/assets/Leapmotor car control cover.png"
             className="w-full h-full object-cover"
           // autoPlay muted loop playsInline
           // poster="https://placehold.co/1920x1080/e2e8f0/64748b/png?text=Loading+Media..."
@@ -91,103 +91,125 @@ export default function ProjectDetail() {
 
         {/* --- CASE STUDY CONTENT SECTIONS --- */}
 
-        {/* Section 1: 背景 */}
+        {/* Section 1: 背景&目标 */}
         <CaseStudySection
-          subtitle="Background"
-          title="Adoption Rate Challenges"
-          description={`相比于依赖网络的4G远程解闭锁和需要贴靠的NFC，无感蓝牙钥匙具有近场通信优势，在地下车库等弱网环境下表现高效。然而私有蓝牙钥匙开通率未达预期。
-            蓝牙钥匙团队于24年末下发25年初Over-the-air(OTA)升级任务，目标提升私有蓝牙钥匙功能的开通率和蓝牙解闭锁成功率，从而整体提高用户满意度，缓解地库罚站问题。`}
+          subtitle="项目背景 & 目标"
+          title={`All-In-One Car Control App
+            一站式车控APP智能体验`}
+          description={`我们为什么要做AI车控？
+            在智能网联场景下，车控APP承载了除“车钥匙”以外更为丰富的功能，逐渐演变为“人车互动枢纽”，需要优化端云协同体验。同时，LLM技术的爆发，为重塑人机交互范式（从GUI向CUI演进）提供了底层技术支撑。
+            过去，车控APP受限于移动端的GUI架构，只能让用户去适应复杂的APP菜单；现在有了LLM的意图理解和Tool-calling（工具调用）能力，我们可以真正实现‘让功能来适应人’。
+            同时，Agent可以为购车咨询、售后维保、用车问答场景提供知识查询入口，有效减少人工客服介入以及投诉。
+
+            Leap AI OS旨在通过引入AI Agent，对原有车控APP功能进行重构，将零跑车控APP从“功能罗列“转变为“意图直达”，构建品牌的智能化体验。
+            `}
         />
 
         {/* Section 1: Problems*/}
         <CaseStudySection
-          subtitle="Pains"
-          title=" Pains & Frustrations"
-          description={`我们原设计上做了UX Audit，并结合用户运营侧的一些问题反馈，发现了以下几个主要问题:
-          a. 阻塞的权限引导流程：目前的交互逻辑将“功能开关”与“全量权限引导”进行了强制联动（Forced Linkage），当用户点击开启蓝牙钥匙时，系统会立刻触发一个不可跳过的多页面的权限开启引导流程（Sequential Flow）。
-          用户被迫在“引导页”与“手机系统设置页”之间进行反复的来回跳转（Constant Switching）。只要用户中断了其中任何一步，整个功能就无法开启，极大地增加了操作阻力和流失率。
-          b. 权限丢失诊断流程长：用户在初次跑通流程后，往往会因系统误操作关闭后台权限。由于用户对“权限”与“蓝牙钥匙功能”之间的强依赖关系不明晰，导致钥匙失效时用户茫然。
-          老版本设计用户必须手动点击“故障诊断”进入三级页面做一个耗时的诊断（Time-consuming Session），诊断结果又有较多技术信息露出。这极大地增加了用户恢复功能的认知门槛和时间成本。 `}
-          media={{
-            type: 'image',
-            src: '/assets/Pains_ble_carkey.png',
-            fit: 'contain'
-          }}
-        />
-
-
-        {/* Section 3: The Solution (Text + Video) */}
-        <CaseStudySection
-          subtitle="Design Iterations"
-          title="Closing the loop"
-          description={`针对上述问题，我们做了以下设计改进:
-          a. 
-          b. 
-          c. 
-          `}
-          media={[
-          {
-            type: 'image',
-            src: '/assets/Improvements_ble_carkey.png',
-            fit: 'contain'
-          },
-          ]}  
+          subtitle="核心问题"
+          title={`From GUI to CUI
+            GUI模式的局限`}
+          description={`除了解闭锁等简单指令，GUI模式下可一键高效完成，复合指令（如一键备车）和长尾模糊指令（如明天下午3点出远门，请保证车辆有80%以上的电以及车内温度适宜），受限于嵌套逻辑结构以及界面的点击交互方式，导致需求无法被精确且高效满足。 
+            a.原GUI树状菜单结构下车况信息、功能层级过深，导致车况信息查找和功能操作成本高、使用率低；
+            b.长尾需求和部分功能逻辑的用户沟通渠道缺失，导致售后、400客服电话投入运营人力成本高，长期来削弱了用户对车的可控感、信任感。
+            c.功能场景割裂，缺乏主动性。传统指令式车控被动响应用户需求，无法根据多场景主动提供服务，使得APP难以满足用户对智能化的期待。`}
+          // media={{
+          //   type: 'image',
+          //   src: '/assets/Pains_ble_carkey.png',
+          // }}
         />
 
 
 
         {/* Section 4: Design System (Full Width Image) */}
         <CaseStudySection
-          subtitle="MVP updates"
-          title="Improvements"
-          description={`根据`}
+          subtitle="Overview & Walkthrough"
+          title="设计概览：我们做了些什么？"
+          description={`1.0的设计，我们想做到基础的车控指令的意图识别。基础车控指令分多指令组合车控和单指令车控。做区分的原因是，单指令意图识别返回快而准，基本不会出错，不需要用户做二次确认，这样效率高。
+            但是多指令组合车控，比如一键备车含空调、座椅加热通风、导航到xxx地址。这里面有一个出错的，就需要用户点进页面去撤回操作。所以1.0版本，我们给到了组合车控的二次确认。
+            等到后期意图识别逐渐准确，我们再拿掉这个二次确认。`}
           media={[
             {
-              type: 'video',
-              src: '/assets/dora_ai_landing_page.mp4',
-              alt: 'Dora ai landing page'
-            },           
-            {
-              type: 'video',
-              src: '/assets/get_started_dora_ai.mp4',
-              alt: 'get started with Dora AI',
+              type: 'image',
+              src: '/assets/AI overview & walkthrough.png',
+              alt: 'AI car control overview and walkthourgh'
             }
           ]}
         />
 
         {/* Section 5: Conclusion */}
         <CaseStudySection
-          subtitle="Design iterations"
-          title="Tags or not?"
-          description={`在“Gain more credits“的设计上，我们发现引入显性标签（Upgrade the plan & Refer a friend）虽然增加了清晰的信息分类，但也引入了不必要的视觉噪音（Visual Noise）。 继而我们通过增加卡片的对比度作为分类暗示，标签的功能变得冗余。
-            移除标签显著提升了界面的信噪比（Signal-to-Noise Ratio），让用户的视线能直接聚焦于核心价值（crerdits）和行动点（Upgrade & Share），而不是浪费精力去处理辅助性的层级信息。与其把所有东西都标出来，不如让context代替labeling自己说话。`}
+          subtitle="Card Design for Confirmation"
+          title="车控：二次确认卡片的设计"
+          description={`在车控场景中，用户的指令往往涉及车辆安全，因此多车控指令场景下，需要二次确认，以确保用户意图被正确理解和执行。我们设计了一个只有“确认”按钮的富文本卡片，有效减少误操作的风险，提升用户对小零信任感和满意度。
+          也以此实现全量车控底座能力的原子化接入与大模型动态编排。
+          一开始，我们想把卡片设计得紧凑一点，“设备”和“模式”/“动作”和“参数”都换行显示。但是这样做会使单个车控component的高度过高，导致整体卡片高度过高，因此我们选择将这些字段都放在同一行显示。
+          有些车控的设置项信息密度比较高，比如“导航地址发送到车”的地址可能会很长，这样基础原子车控使用1*2容器、过长的使用1*4的容器，会使得控件size不统一，给大模型返回参数再渲染前端控件带来很多麻烦。因此我们全部统一设计1*4容器。并严格按照icon-device-action（后台槽位表维护的顺序）的字段设计，这样算法用大模型在渲染调用前端控件时，节省了很多开发资源。
+          icon的使用也没有做到区分开启/关闭状态，要维护全量icon的on-off状态，这又需要添加一个参数字段。
+          那为什么不在卡片里面直接做调节参数的GUI控件呢？这样不是更符合用户长久以来的操作习惯吗？比如滑轨、步进器？
+          这样我们为CUI做的努力，就付之东流了。又变成了GUI，这不符合我们的设计初衷，也不是产品的方向。
+          这让我意识到一个问题，AI设计的工作流中，设计不是单纯为了“效果更好”做适配，而是需要考虑到整个开发周期快速迭代的效率，舍弃一些触及不到用户体验本质的设计。`}
+           
           media={[
-            // {
-            //   type: 'image',
-            //   src: '/assets/iterations_share.png', 
-            //   alt: '[Copy link & Share] visual exploration',
-            //   caption: '[Copy link & Share] visual exploration',
-            //   fit: 'contain',
-            // },
             {
               type: 'image',
-              src: '/assets/iterations_referral.png',
+              src: '/assets/confirmation cards tries.png',
               alt: '[Refer & Gain more credits] visual exploration',
-              caption: '[Refer & Gain more credits] visual exploration',
               fit: 'contain',
             }
           ]}
         />
 
         <CaseStudySection
-          subtitle="Cold Start Problem"
-          title="Reduce Blank Canvas Paralysis"
-          description={`在Dora AI冷启动阶段，主要的设计目标为尽量降低用户对0-1建站的畏难心理，期望借力AI快速生成期望网站的基本布局，并引导用户进行后续的修改。根据竞品调研，我们发现如Webflow、Wix等平台均提供了丰富的模板库供用户选择，以减少从零开始设计的难度。但是Dora仍然在起步阶段，没有一个十分强大的社群来提供海量UGC模板。
-            因此我们决定通过AI生成多样化的网站模板，用户只需提供简单的文本描述，系统即可生成符合其需求的3D网站布局。这种方式旨在降低了设计门槛，帮助他们专注于细节微调，从而在极短时间内达成最终交付。`}
+          subtitle="V1.0 Agent Framework"
+          title="Query的分流：规则+模型的结合"
+          description={`在1.0的Agent Framework里,我们通过一个喂标注数据训练的轻量化的bert模型（比如：“帮我开窗户”打上“车控”标签），对所有用户query进行大致分流（意图识别），是车书、车控还是车况。
+            按照features，“怎么用、如何操作、什么意思、有啥用、为什么会...、怎么解决”，带明显的问句结构的，属于用车问答（车书）。祈使句、命令、请求等，属于车控。包含数据相关的，如“多少、数值、当前、状态、温度、电量、里程、时间等”，属于车况查询。
+            若落域到车控，我们先用规则层进行初筛，也就是根据一个专门为冷启动准备的语义标准库进行正则匹配，如果无法匹配到，对query进行向量嵌入，并泛化匹配语义库里最接近的意图，如果还是无法匹配到，我们再调用阿里百炼兜底。
+            因为流量大，用LLM做所有请求的分流太慢且太贵。所以我们用规则和向量泛化做层层过滤。
+            接着就是对槽位和实体的提取。比如空调xx度、动作是打开还是关闭、座椅调节位置是哪个等。`}
           media={{
-            type: 'video',
-            src: '/assets/dora_ai_main.mp4',
+            type: 'image',
+            src: '/assets/AI v1.0 model framework.png',
             alt: 'Cold-start AI feature'
+          }}
+        />
+
+        <CaseStudySection
+          subtitle="Problems encountered"
+          title="远控场景特性问题：硬编码的思维链"
+          description={`在demo阶段端到端跑通的过程中，我们发现多指令下发的耗时要比单指令长很多。
+            我们分析了原因后发现，一个是长难指令意图识别确实耗时更长（无法直接进行规则匹配，需要LLM兜底），还有一个原因是车辆下电的时候，ABCD 4个指令连续下发，如果是非快速远控，需要A把车辆唤醒MQ在线后，BCD才能继续下发。
+            一个指令下发+等待车辆上电+其余指令并行下发，这三个是串行的。有着很长的等待时间。为了缓解这个等待焦虑，我们想fake一个思维链。
+            一个硬编码的思维链意味着固定的动画时长、固定的接口调用节点。因为其实没有推理模型在后面工作。
+            最大的问题在于：没办法真正区分车控、车书、车况不同的思维链节点的文案，因为那个时候模型还没有真正介入意图识别。
+            我们考虑在2.0逐步优化这个思维链，以反映query流转的真实路径，在大模型意图识别后，返回给前端一个意图类型，去判断各自的思维链条以及接口调用节点。`}
+          media={{
+            type: 'image',
+            src: '/assets/chain of thought.png',
+            alt: 'A faked chain of thought'
+          }}
+        />
+
+
+        <CaseStudySection
+          subtitle="Scenario Division & Command Scope"
+          title="细分场景以及指令范围"
+          description={`我们处理不同场景的原则是：高频场景提效率，低频场景保正确。
+            单指令比如“打开空调”，“打开主驾座椅通风”等，这种都是高频场景，车控可以直接下发，效率优先。如果在这些指令上还要不停二次追问以及要求用户确认，会使得语音控车失去意义。
+            但是比如具体时间下导航发送到车和空调的混合指令（延迟备车场景），这种时候首要保证地址是用户要的、时间是用户要的。
+            原因1：1.0版本还没有做组合指令的记忆存储和回撤。在我们放开了很多业务指令范围的情况下，如果下发错了，用户需要去车上、或者app的界面进行回撤，易造成客诉。
+            原因2：二次确认表单给予了用户多轮对话调整组合指令以及时间的机会。
+            关于指令范围，我们放开了许多原有的业务参数范围，比如远控场景的车窗只能通风、半开和关闭，现在自然语言控车放开了以10%为刻度的车窗控制。
+            预约备车及充电原本不支持未来指定时间的预约，现在我们打通并支持任意一个有效时间的预约。
+            车控指令应该是车辆底层原子能力的排列组合。我们认为这是自然语言控车的本源意义，让用户尽可能做到“想什么做什么”，而不是“功能定义是什么才能做什么”。
+            业务逻辑是研发猜测的用户需求，而用户有自己的需求。
+            `}
+          media={{
+            type: 'image',
+            src: '/assets/AI navigation.png',
+            alt: 'AI navigation'
           }}
         />
 

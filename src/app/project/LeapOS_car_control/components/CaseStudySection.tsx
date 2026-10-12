@@ -22,9 +22,11 @@ export function CaseStudySection({ media, layout, subtitle, title, description }
                         </span>
                     )}
                     {title && (
-                        <h2 className="text-3xl md:text-4xl font-semibold text-black mb-6 tracking-tight">
-                            {title}
-                        </h2>
+                        <div className="text-3xl md:text-4xl font-semibold text-black mb-6 tracking-tight">
+                            {title.split('\n').map((line, i) => (
+                                <p key={i}>{line}</p>
+                            ))}
+                        </div>
                     )}
                     {description && (
                         <div className="text-lg md:text-xl leading-relaxed text-gray-600 space-y-4">

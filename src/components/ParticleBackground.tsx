@@ -35,7 +35,7 @@ export function ParticleBackground() {
       }
     };
 
-    let mouse = { x: -1000, y: -1000 };
+    const mouse = { x: -1000, y: -1000 };
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);

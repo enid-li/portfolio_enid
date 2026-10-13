@@ -198,18 +198,21 @@ export default function ProjectDetail() {
               type: 'image',
               src: '/assets/底栏_驾驶模式.png',
               alt: 'A smartcard of driving mode switch popped from smartdock',
+              caption: 'A smartcard of driving mode switch popped from smartdock',
               fit: 'contain'
             },
             {
               type: 'image',
               src: '/assets/底栏_空调2.png',
               alt: 'A smartcard of Temperature control popped from smartdock',
+              caption: 'A smartcard of Temperature control popped from smartdock',
               fit: 'contain'
             },
             {
               type: 'image',
               src: '/assets/底栏_可编辑.png',
               alt: 'An editable smartdock bar',
+              caption: 'An editable smartdock bar',
               fit: 'contain'
             },
             

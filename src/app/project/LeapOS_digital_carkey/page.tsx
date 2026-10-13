@@ -40,7 +40,7 @@ export default function ProjectDetail() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-gray-200 bg-white/50 backdrop-blur-md mb-6">
               <span className="w-2 h-2 rounded-full bg-[#13A71D]"></span>
-              <span className="text-xs font-bold tracking-widest uppercase text-gray-500">AI Product Design</span>
+              <span className="text-xs font-bold tracking-widest uppercase text-gray-500">IoT App Design</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tighter leading-none mb-8 text-black">
               <span>LeapOS 3.0 digital key</span>

@@ -57,15 +57,15 @@ export default function ProjectDetail() {
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Timeline</p>
-                <p className="font-semibold">August. 2024 - Jan. 2025</p>
+                <p className="font-semibold">May. 2024 - Now</p>
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Team</p>
-                <p className="font-semibold">4 Devs, 4 PM, 1 UX</p>
+                <p className="font-semibold">16 Devs, 3 PM, 1 UX</p>
               </div>
               <div>
                 <p className="text-xs text-gray-400 font-bold uppercase tracking-wider mb-1">Impact</p>
-                <p className="font-semibold">Adoption Rate 5% ↑ </p>
+                <p className="font-semibold">1 Million + User </p>
               </div>
             </div>
           </motion.div>

@@ -277,11 +277,10 @@ export default function Home() {
             </h1>
 
             <p className="text-xl md:text-2xl font-medium max-w-2xl mx-auto pt-6" style={{ color: COLORS.dark, opacity: 0.6 }}>
-              I build product where <span className="font-bold relative px-1">
-                Creativity
+              I firmly believe that <span className="font-bold relative px-1">
                 <span className="absolute inset-0 bg-[#E2F175] -z-10 -rotate-2 rounded-sm opacity-60"></span>
-              </span> meets <span className="font-bold relative px-1">
-                Functionality
+              </span>product thinking <span className="font-bold relative px-1">
+                is indispensable for designers in the new era.
                 <span className="absolute inset-0 bg-[#F79CEF] -z-10 rotate-2 rounded-sm opacity-60"></span>
               </span>.
             </p>
@@ -297,7 +296,8 @@ export default function Home() {
           <GlassProjectCard
             title="Leap HMI 4.0 Redesign"
             category="HMI Design"
-            description="Optimized Leap HMI from 3.5+ to 4.0 to enhance experience of quick control of cars, delivering a seamless senseless entry experience."
+            description="Optimized the Leap HMI from version 3.5+ to 4.0, with a full redesign guided by three core principles: Discoverable, Unobtrusive, Intuitive and Effortless.
+            我们将 Leap HMI 从 v3.5 + 优化升级至 v4.0，并基于四大核心设计原则：不难找、不打断、不难猜、不费脑，对其重新设计"
             href="/project/Leap_hmi4.0"
             media={{
               type: 'image',
@@ -309,7 +309,8 @@ export default function Home() {
           <GlassProjectCard
             title="LeapOS Digital Car Key"
             category="Connected Car Experience"
-            description="Optimized digital carkey system to enhance experience conherency and integrity, delivering a seamless senseless entry experience."
+            description="Refactored the digital car key page. The upgrade improves compatibility with upcoming digital key protocols while enabling a better frictionless lock and unlock experience.
+            优化并重构数字车钥匙界面。提升系统对未来数字钥匙协议（UWB)的兼容性，同时实现更优质的无感解闭锁体验"
             href="/project/LeapOS_digital_carkey"
             media={{
               type: 'image',
@@ -321,7 +322,8 @@ export default function Home() {
           <GlassProjectCard
             title="LeapOS AI Car-control Agent"
             category="Connected Car Experience"
-            description="An LLM-powered Mobility Agent that redefines vehicle-control paradigm, turning complex control hierarchies into a seamless, intent-driven CUI interface."
+            description="An LLM-powered Mobility Agent that redefines vehicle-control paradigm, turning complex control hierarchies into a seamless, intent-driven CUI interface.
+            打造基于大模型的出行智能体，重新定义远控范式，将多层级的嵌套页面转化为语音、意图驱动的对话式交互界面，实现一句话控车、车况查询、用车手册等功能"
             href="/project/LeapOS_car_control"
             media={{
               type: 'image',
@@ -331,9 +333,10 @@ export default function Home() {
 
           {/*项目5 - APP Collection*/}
           <GlassProjectCard
-            title="APP ProjectCollection"
+            title="APP Project Collection"
             category="IoT Design"
-            description="Designed Dora AI features beta version, enabling a natural-language-driven 3D website creation experience."
+            description="A gallery for the Leap remote control APP, showcasing my core work scope: domestic & overseas vehicle data visualization, overseas marketplace, user manual, Temperature control, maps.
+            这是一个Leap远控APP的界面合集，里面包含了我做过的主要APP需求，包含但不限于：国内外用车数据可视化、海外商城与用户手册、车内温控、地图及电子围栏"
             href="/project/Leap_APP_Collection"
             media={{
               type: 'image',
@@ -344,8 +347,9 @@ export default function Home() {
           {/*项目5 - Dora AI*/}
           <GlassProjectCard
             title="Dora.ai"
-            category="AI no-code Web Builder"
-            description="Designed Dora AI features beta version, enabling a natural-language-driven 3D website creation experience."
+            category="No-code Web Builder"
+            description="Designed No-code web builder Dora AI features, enabling a natural-language-driven 3D website Developing experience. 
+            设计无代码建站工具 Dora AI 功能，提供自然语言驱动的3D网站创作体验。"
             href="/project/dora"
             media={{
               type: 'image',
@@ -357,7 +361,8 @@ export default function Home() {
           <GlassProjectCard
             title="Nicelyformed"
             category="AI Form Builder"
-            description="Nicelyformed is an AI chatbot for form building, enabling users to generate surveys and do the iterations through dialogue."
+            description="Nicelyformed is an AI chatbot for form building, enabling users to generate surveys and do the iterations through dialogue.
+            这是一款表单搭建AI对话机器人，用户可通过自然语言对话生成问卷并迭代优化。"
             href="/project/nicelyformed"
             media={[
               { type: 'image', src: "/assets/nicelyformed_hero.JPG" },
@@ -366,35 +371,13 @@ export default function Home() {
 
         </section>
 
-        {/* 3. Horizontal Cards (Updated to Array of MediaItems) */}
+        {/* 3. Horizontal Cards (Updated to Array of MediaItems) 
         <section className="space-y-8 mb-32">
 
           {/* Example: Mixed Video and Images */}
-          <GlassProjectCardHorizontal
-            title="Brand Identity"
-            category="Visual Design"
-            description="Complete brand identity system including typography, color palette, and iconography guidelines."
-            href="/project/brand"
-            mediaItems={[
-              { type: 'video', src: "/assets/brand_showcase.mp4" }, // 假设第一张是视频
-              { type: 'image', src: "https://placehold.co/600x400/ddd6fe/8b5cf6/png?text=Typography" },
-              { type: 'image', src: "https://placehold.co/600x400/fce7f3/ec4899/png?text=Icons" }
-            ]}
-          />
 
-          <GlassProjectCardHorizontal
-            title="Mobile App Redesign"
-            category="Mobile UX"
-            description="Complete redesign of native iOS and Android app focusing on performance and user engagement."
-            href="/project/mobile"
-            mediaItems={[
-              { type: 'image', src: "https://placehold.co/600x400/e0e7ff/4f46e5/png?text=Onboarding" },
-              { type: 'image', src: "https://placehold.co/600x400/f0fdf4/22c55e/png?text=Dashboard" },
-              { type: 'image', src: "https://placehold.co/600x400/fef2f2/f43f5e/png?text=Settings" }
-            ]}
-          />
 
-          <GlassProjectCardHorizontal
+          {/*<GlassProjectCardHorizontal
             title="Web Platform"
             category="Full Stack Design"
             description="Enterprise web platform with complex data visualization and real-time collaboration features."
@@ -405,16 +388,16 @@ export default function Home() {
               { type: 'image', src: "https://placehold.co/600x400/f5f3ff/a78bfa/png?text=Reports" }
             ]}
           />
-        </section>
+        </section>*/}
 
         {/* 保持原来的 Speaking, Footer 等 */}
         <section className="max-w-4xl mx-auto mb-48">
           <div className="flex items-baseline justify-between mb-16 border-b border-gray-200 pb-6">
-            <h2 className="text-4xl font-semibold tracking-tight">Speaking & Writing</h2>
-            <span className="text-gray-400">2023 — 2025</span>
+            <h2 className="text-4xl font-semibold tracking-tight">Experience</h2>
+            <span className="text-gray-400">2023 — 2026</span>
           </div>
           <div className="space-y-2">
-            {['Conference: Deep Dive', 'Building Tools', 'Advocating for Craft'].map((item, i) => (
+            {['Ford London (23.1-23.5) - UX Designer', 'Dora & Nicelyfromed (23.10-24.2) - Product Designer & Entrepreneur', 'Leapmotor (24.5-Now) - UX Designer'].map((item, i) => (
               <ListItem key={i} title={item} />
             ))}
           </div>

@@ -13,9 +13,8 @@ export function Navigation() {
         <Link href="/" className="flex gap-2 items-center justify-between font-bold text-xl tracking-tighter hover:opacity-70 transition-opacity">
             {isHome ? null : <ArrowLeft className="w-4 h-4" />} Enid Li</Link>
         <div className="hidden md:flex items-center gap-8">
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/resume">Resume</NavLink>
-            <NavLink href="/others">Others</NavLink>
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/project/Resume">Resume</NavLink>
         </div>
         <button className="md:hidden p-2"><Menu className="w-6 h-6" /></button>
     </nav>

@@ -346,7 +346,7 @@ export default function Home() {
 
           {/*项目5 - Dora AI*/}
           <GlassProjectCard
-            title="Dora.ai"
+            title="Dora.ai 无代码建站工具"
             category="No-code Web Builder"
             description="Designed No-code web builder Dora AI features, enabling a natural-language-driven 3D website Developing experience. 
             设计无代码建站工具 Dora AI 功能，提供自然语言驱动的3D网站创作体验。"
@@ -359,7 +359,7 @@ export default function Home() {
 
           {/*项目6 - Nicelyformed*/}
           <GlassProjectCard
-            title="Nicelyformed"
+            title="Nicelyformed AI问卷生成工具"
             category="AI Form Builder"
             description="Nicelyformed is an AI chatbot for form building, enabling users to generate surveys and do the iterations through dialogue.
             这是一款表单搭建AI对话机器人，用户可通过自然语言对话生成问卷并迭代优化。"
@@ -408,7 +408,7 @@ export default function Home() {
                         href="mailto:hello@enidli.com"
                         className="group relative inline-flex flex-col items-center gap-4 w-full justify-center"
                     >
-                        <span className="text-3xl md:text-5xl font-semibold tracking-tight text-black group-hover:text-[#13A71D] transition-colors">
+                        <span className="max-w-full break-all text-3xl md:text-5xl font-semibold tracking-tight text-black group-hover:text-[#13A71D] transition-colors">
                             xinyuanli12138@outlook.com
                         </span>
                         <span className="text-sm text-gray-700">Let's build something fun.</span>

@@ -318,14 +318,27 @@ export default function ProjectDetail() {
         <CaseStudySection
           subtitle="SEAT - DESIGN TOPIC"
           title="座椅设计专题"
-          description={`考虑到D车型系列，前排有帮二三排乘客调节座椅的需求（该需求待考证），产品部希望把所有座椅调节的操作均放在一屏中（以下方案B）。`}
+          description={`考虑到D车型系列，前排有帮二三排乘客调节座椅的需求（该需求待考证），产品部希望把所有座椅调节的操作均放在一屏中（以下方案B）。
+            但页面并不够intuitive, 过度的按钮堆叠会加重认知负荷。座椅联动类模式功能也无法全屏展示。故我们在5个方案中进行讨论。`}
           media={[
             {
               type: 'image',
-              src: '/assets/cover_change_feature.png',
-              alt: 'nicelfotmed branding customization feature before and after',
+              src: '/assets/Seats_Design_directions.png',
+              alt: 'Seats Design directions',
               fit: 'contain',
-            }
+            },
+            {
+              type: 'image',
+              src: '/assets/Seats_Design_directions_Comparison.png',
+              alt: 'Seats Design directions_Comparison',
+              fit: 'contain',
+            },
+            {
+              type: 'image',
+              src: '/assets/Seats_Comparison & Analysis.png',
+              alt: 'Seats Comparison & Analysis',
+              fit: 'contain',
+            },
           ]}
 
         

@@ -103,6 +103,8 @@ export default function ProjectDetail() {
           media={{
             type: 'image',
             src: '/assets/MVP version.png',
+            alt:'MVP version of the design',
+            caption:'MVP version of the design',
             fit: 'contain'
           }}
         />
@@ -119,6 +121,8 @@ export default function ProjectDetail() {
           media={{
             type: 'image',
             src: '/assets/pains_UX_audit.png',
+            alt:'Pains discovered from UX audit',
+            caption:'Pains discovered from UX audit',
             fit: 'contain'
           }}
         />
@@ -138,6 +142,8 @@ export default function ProjectDetail() {
             {
               type: 'image',
               src: '/assets/MVP version_updated.png',
+              alt:'Some changes of MVP',
+              caption:'Some changes of MVP',
               fit: 'contain'
             },
           ]}
@@ -159,6 +165,7 @@ export default function ProjectDetail() {
               type: 'image',
               src: '/assets/v1_dashboard_CUI.png',
               alt: 'v1 dashboard with CUI panel',
+              caption:'v1 dashboard with CUI panel',
               fit: 'contain'
             },
           ]}
@@ -173,25 +180,29 @@ export default function ProjectDetail() {
             {
               type: 'image',
               src: '/assets/version management.png',
-              alt: '[Copy link & Share] visual exploration',
+              alt: 'Version management design directions',
+              caption:'Version management design directions',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/Option A&B.png',
               alt: 'version management feature placement comparison',
+              caption:'Version management design directions',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/Option C&D.png',
               alt: 'version management feature placement comparison',
+              caption:'Version management design directions',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/Comparison_CN.png',
               alt: 'version management feature placement comparison',
+              caption:'Version management design directions',
               fit: 'contain',
             }
           ]}
@@ -208,13 +219,15 @@ export default function ProjectDetail() {
             {
               type: 'image',
               src: '/assets/cover_change.png',
-              alt: 'nicelfotmed branding customization feature',
+              alt: 'Branding customization feature',
+              caption: 'Branding customization feature',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/covers.png',
-              alt: 'nicelfotmed branding customization feature cover examples',
+              alt: 'Branding customization feature cover examples',
+              caption: 'Branding customization feature cover examples',
               fit: 'contain',
             }
           ]}
@@ -232,7 +245,8 @@ export default function ProjectDetail() {
             {
               type: 'image',
               src: '/assets/cover_change_feature.png',
-              alt: 'nicelfotmed branding customization feature before and after',
+              alt: 'Branding customization feature before and after',
+              caption: 'Branding customization feature before and after',
               fit: 'contain',
             }
           ]}
@@ -242,14 +256,14 @@ export default function ProjectDetail() {
         <div className="border-t border-gray-200 mt-32 pt-16">
           <p className="text-center text-gray-400 text-sm font-bold uppercase tracking-wider mb-8">Next Project</p>
 
-          <Link href="/project/workflow" className="group block max-w-4xl mx-auto">
+          <Link href="/project/Leap_hmi4.0" className="group block max-w-4xl mx-auto">
             <motion.div
               whileHover={{ scale: 0.98 }}
               className="relative rounded-3xl overflow-hidden bg-[#E2F175] aspect-[21/9] flex items-center justify-center border border-black/5"
             >
               <div className="text-center z-10">
-                <h3 className="text-4xl md:text-6xl font-bold text-black mb-2 group-hover:underline decoration-4 underline-offset-4 decoration-[#F79CEF]">Workflow Tool</h3>
-                <p className="text-black/60 font-medium">UX Architecture</p>
+                <h3 className="text-4xl md:text-6xl font-bold text-black mb-2 group-hover:underline decoration-4 underline-offset-4 decoration-[#F79CEF]">HMI Design</h3>
+                <p className="text-black/60 font-medium">Leap HMI 4.0 redesign</p>
               </div>
 
               {/* Decorative Doodles for Next Project Card */}

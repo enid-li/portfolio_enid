@@ -133,7 +133,8 @@ export default function ProjectDetail() {
             {
               type: 'image',
               src: '/assets/AI overview & walkthrough.png',
-              alt: 'AI car control overview and walkthourgh'
+              alt: 'AI car-control overview and walkthourgh',
+              caption:'AI car-control overview and walkthourgh',
             }
           ]}
         />
@@ -155,7 +156,8 @@ export default function ProjectDetail() {
             {
               type: 'image',
               src: '/assets/confirmation cards tries.png',
-              alt: '[Refer & Gain more credits] visual exploration',
+              alt: 'Some design tries of confirmation cards',
+              caption:'Some design tries of confirmation cards',
               fit: 'contain',
             }
           ]}
@@ -172,7 +174,8 @@ export default function ProjectDetail() {
           media={{
             type: 'image',
             src: '/assets/AI v1.0 model framework.png',
-            alt: 'Cold-start AI feature'
+            alt: 'A simple structure showing the basic logic',
+            caption:'A simple structure showing the basic logic',
           }}
         />
 
@@ -188,7 +191,8 @@ export default function ProjectDetail() {
           media={{
             type: 'image',
             src: '/assets/chain of thought.png',
-            alt: 'A faked chain of thought'
+            alt: 'A faked chain of thought',
+            caption:'A faked chain of thought',
           }}
         />
 
@@ -209,7 +213,8 @@ export default function ProjectDetail() {
           media={{
             type: 'image',
             src: '/assets/AI navigation.png',
-            alt: 'AI navigation'
+            alt: 'AI navigation feature',
+            caption:'AI navigation feature',
           }}
         />
 

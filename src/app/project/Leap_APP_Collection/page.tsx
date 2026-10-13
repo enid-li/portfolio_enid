@@ -101,6 +101,8 @@ export default function ProjectDetail() {
           media={{
             type: 'image',
             src: '/assets/APP_Design_before.png',
+            alt:'App main pages before redesign',
+            caption:'App main pages before redesign',
             fit: 'contain'
           }}
         />
@@ -121,12 +123,15 @@ export default function ProjectDetail() {
           {
             type: 'video',
             src: '/assets/3d model.mov',
+            alt:'video showcasing 3d-car-model home page',
+            caption:'video showcasing 3d-car-model home page',
             fit: 'contain'
            },
              {
               type: 'image',
               src: '/assets/APP_Design_after.png',
-              alt: 'Car Control Page',
+              alt: 'APP key pages after redesign',
+              caption:'APP key pages after redesign',
               fit: 'contain',
             }
           ]}
@@ -143,7 +148,8 @@ export default function ProjectDetail() {
              {
               type: 'image',
               src: '/assets/APP_Design_oversea.png',
-              alt: 'Car Control Page',
+              alt: 'Oversea APP key pages after redesign',
+              caption:'Oversea APP key pages after redesign',
               fit: 'contain',
             }
           ]}

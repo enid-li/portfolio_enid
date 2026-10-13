@@ -117,6 +117,7 @@ export default function ProjectDetail() {
           media={{
             type: 'image',
             src: '/assets/Referral programme.png',
+            alt:'Join the whitelist & Share for free trial',
             caption: 'Join the whitelist & Share for free trial'
           }}
         />
@@ -133,12 +134,14 @@ export default function ProjectDetail() {
             {
               type: 'video',
               src: '/assets/dora_ai_landing_page.mp4',
-              alt: 'Dora ai landing page'
+              alt: 'Video: Dora ai landing page',
+              caption:'Video: Dora ai landing page',
             },           
             {
               type: 'video',
               src: '/assets/get_started_dora_ai.mp4',
-              alt: 'get started with Dora AI',
+              alt: 'Video: Get started with Dora AI',
+              caption:'Video: Get started with Dora AI',
             }
           ]}
         />
@@ -160,8 +163,8 @@ export default function ProjectDetail() {
             {
               type: 'image',
               src: '/assets/iterations_referral.png',
-              alt: '[Refer & Gain more credits] visual exploration',
-              caption: '[Refer & Gain more credits] visual exploration',
+              alt: '[Refer & Gain more credits] design exploration',
+              caption: '[Refer & Gain more credits] design exploration',
               fit: 'contain',
             }
           ]}
@@ -175,7 +178,8 @@ export default function ProjectDetail() {
           media={{
             type: 'video',
             src: '/assets/dora_ai_main.mp4',
-            alt: 'Cold-start AI feature'
+            alt: 'Video: Cold-start AI feature',
+            caption: 'Video: Cold-start AI feature',
           }}
         />
 

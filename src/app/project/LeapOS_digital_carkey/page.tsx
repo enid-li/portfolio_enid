@@ -112,6 +112,8 @@ export default function ProjectDetail() {
           media={{
             type: 'image',
             src: '/assets/Pains_ble_carkey.png',
+            alt:'Pains of previous BLE bluetooth car key design',
+            caption:'Pains of previous BLE bluetooth car key design',
             fit: 'contain'
           }}
         />
@@ -133,11 +135,15 @@ export default function ProjectDetail() {
           {
             type: 'image',
             src: '/assets/Improvements_ble_carkey.png',
+            alt:'BLE car key after redesign',
+            caption:'BLE car key after redesign',
             fit: 'contain'
           },
           {
             type: 'image',
             src: '/assets/ota1.png',
+            alt:'BLE car key page after the first OTA upgrade',
+            caption:'BLE car key page after the first OTA upgrade',
             fit: 'contain'
           },
           ]}  
@@ -161,6 +167,8 @@ export default function ProjectDetail() {
           {
             type: 'image',
             src: '/assets/old_version_key.png',
+            alt:'Digital car-key page begfore the reconstruction',
+            caption:'Digital car-key page begfore the reconstruction',
             fit: 'contain'
           },
           ]}  
@@ -184,6 +192,8 @@ export default function ProjectDetail() {
           {
             type: 'image',
             src: '/assets/old_version_key.png',
+            alt:'The basic BLE key & ICCOA before the reconstruction',
+            caption:'The basic BLE key & ICCOA before the reconstruction',
             fit: 'contain'
           },
           ]}  
@@ -218,11 +228,15 @@ export default function ProjectDetail() {
           {
             type: 'image',
             src: '/assets/new_version_ICCOA.png',
+            alt:'New design of the ICCOA car-key',
+            caption:'New design of the ICCOA car-key',
             fit: 'contain'
           },
           {
             type: 'image',
             src: '/assets/new_version_BLE.png',
+            alt:'New design of the BLE car-key',
+            caption:'New design of the BLE car-key',
             fit: 'contain'
           },
           ]}  
@@ -239,11 +253,15 @@ export default function ProjectDetail() {
           {
             type: 'image',
             src: '/assets/key_data1.png',
+            alt:'Adoption rate shocasing the result of redesign',
+            caption:'Data shocasing the result of redesign',
             fit: 'contain'
           },
           {
             type: 'image',
             src: '/assets/key_data2.png',
+            alt:'Success rate shocasing the result of redesign',
+            caption:'Success rate shocasing the result of redesign',
             fit: 'contain'
           },
           ]}  

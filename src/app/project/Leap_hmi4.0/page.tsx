@@ -121,12 +121,14 @@ export default function ProjectDetail() {
               type: 'image',
               src: '/assets/Scenarios & frequency.png',
               alt: 'Scenarios & frequency',
+              caption:'Scenarios & frequency',
               fit: 'contain',
             },            
             {
               type: 'image',
               src: '/assets/4 design principles.png',
-              alt: 'Scenarios & frequency',
+              alt: '4 design principles',
+              caption:'4 design principles',
               fit: 'contain',
             }
           ]}
@@ -156,18 +158,21 @@ export default function ProjectDetail() {
               type: 'image',
               src: '/assets/Framework_Home.png',
               alt: 'Framework of home Parking.png',
+              caption:'Low-fi indicating home page structure under parking mode',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/Framework_Driving Status.png',
               alt: 'Framework of home Driving',
+              caption:'Low-fi indicating home page structure under Driving mode',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/Framework_Quick Panel.png',
               alt: 'Framework of Quick Panel',
+              caption:'Low-fi indicating Quick panel pulled-down',
               fit: 'contain',
             },
           ]}
@@ -185,25 +190,26 @@ export default function ProjectDetail() {
             {
               type: 'image',
               src: '/assets/底栏_除霜打组.png',
-              alt: 'v1 dashboard with CUI panel',
+              alt: 'Defroster card popped from smartdock',
+              caption:'A smartcard of Defroster popped from smartdock',
               fit: 'contain'
             },            
             {
               type: 'image',
               src: '/assets/底栏_驾驶模式.png',
-              alt: 'v1 dashboard with CUI panel',
+              alt: 'A smartcard of driving mode switch popped from smartdock',
               fit: 'contain'
             },
             {
               type: 'image',
               src: '/assets/底栏_空调2.png',
-              alt: 'v1 dashboard with CUI panel',
+              alt: 'A smartcard of Temperature control popped from smartdock',
               fit: 'contain'
             },
             {
               type: 'image',
               src: '/assets/底栏_可编辑.png',
-              alt: 'v1 dashboard with CUI panel',
+              alt: 'An editable smartdock bar',
               fit: 'contain'
             },
             
@@ -221,25 +227,29 @@ export default function ProjectDetail() {
             {
               type: 'image',
               src: '/assets/After_home_CardFolded.png',
-              alt: 'Home after redesign with a folded card',
+              alt: 'A folded fast car-control card on home page',
+              caption:'A folded fast car-control card on home page',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/After_home_CardExpand.png',
-              alt: 'Home after redesign with an expanded card',
+              alt: 'A expanded fast car-control card on home page',
+              caption:'A expanded fast car-control card on home page',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/After_home_Grouping.png',
-              alt: 'Home after redesign with a grouped card',
+              alt: 'Adjust-related functions grouped together',
+              caption:'Adjust-related functions grouped together',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/After_home_Editing.png',
-              alt: 'Home after redesign with a grouped card',
+              alt: 'Editable home page with containers floating',
+              caption:'Editable home page with customised containers floating',
               fit: 'contain',
             },
           ]}
@@ -260,25 +270,29 @@ export default function ProjectDetail() {
             {
               type: 'image',
               src: '/assets/Before_Quick Panel.png',
-              alt: 'before redesign Quick Panel Default Mode',
+              alt: 'Quick Panel Default Mode before redesign',
+              caption:'Quick Panel Default Mode before redesign',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/After_Quick Panel.png',
-              alt: 'after redesign Quick Panel Default Mode',
+              alt: 'Quick Panel Default Mode after redesign',
+              caption:'Quick Panel Default Mode after redesign',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/Before_Quick Panel_EditingMode.png',
-              alt: 'before redesign Quick Panel Editing Mode',
+              alt: 'Quick Panel Editing Mode before redesign',
+              caption:'Quick Panel Editing Mode before redesign',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/After_Quick Panel_EditingMode.png',
-              alt: 'after redesign Quick Panel Editing Mode',
+              alt: 'Quick Panel Editing Mode after redesign',
+              caption:'Quick Panel Editing Mode after redesign',
               fit: 'contain',
             }
           ]}
@@ -305,7 +319,8 @@ export default function ProjectDetail() {
             {
               type: 'image',
               src: '/assets/Car_Control_page.png',
-              alt: 'Car Control Page',
+              alt: 'Car Control & Car Settings Page',
+              caption:'Car Control & Car Settings Page',
               fit: 'contain',
             }
           ]}
@@ -325,18 +340,21 @@ export default function ProjectDetail() {
               type: 'image',
               src: '/assets/Seats_Design_directions.png',
               alt: 'Seats Design directions',
+              caption:'Seats Design directions',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/Seats_Design_directions_Comparison.png',
-              alt: 'Seats Design directions_Comparison',
+              alt: 'Seats Design direction Comparison',
+              caption:'Seats Design direction Comparison',
               fit: 'contain',
             },
             {
               type: 'image',
               src: '/assets/Seats_Comparison & Analysis.png',
               alt: 'Seats Comparison & Analysis',
+              caption:'Seats Comparison & Analysis',
               fit: 'contain',
             },
           ]}

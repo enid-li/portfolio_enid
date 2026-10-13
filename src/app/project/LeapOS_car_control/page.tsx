@@ -43,7 +43,7 @@ export default function ProjectDetail() {
               <span className="text-xs font-bold tracking-widest uppercase text-gray-500">AI Product Design</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tighter leading-none mb-8 text-black">
-              <span>LeapOS 3.0 AI car control</span>
+              <span>Leap AI car control</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-500 font-medium leading-relaxed mb-12">
             NicelyFormed transforms natural language into production-ready forms in seconds, replacing tedious manual construction with a smart CUI.
@@ -217,14 +217,14 @@ export default function ProjectDetail() {
         <div className="border-t border-gray-200 mt-32 pt-16">
           <p className="text-center text-gray-400 text-sm font-bold uppercase tracking-wider mb-8">Next Project</p>
 
-          <Link href="/project/workflow" className="group block max-w-4xl mx-auto">
+          <Link href="/projectLeap_APP_Collection" className="group block max-w-4xl mx-auto">
             <motion.div
               whileHover={{ scale: 0.98 }}
               className="relative rounded-3xl overflow-hidden bg-[#E2F175] aspect-[21/9] flex items-center justify-center border border-black/5"
             >
               <div className="text-center z-10">
-                <h3 className="text-4xl md:text-6xl font-bold text-black mb-2 group-hover:underline decoration-4 underline-offset-4 decoration-[#F79CEF]">Workflow Tool</h3>
-                <p className="text-black/60 font-medium">UX Architecture</p>
+                <h3 className="text-4xl md:text-6xl font-bold text-black mb-2 group-hover:underline decoration-4 underline-offset-4 decoration-[#F79CEF]">Leap APP Collection</h3>
+                <p className="text-black/60 font-medium">IoT Design</p>
               </div>
 
               {/* Decorative Doodles for Next Project Card */}
